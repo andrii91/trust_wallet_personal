@@ -15,7 +15,7 @@ $(document).ready(function () {
   // USD CHART
   if ($("#total-chart").length > 0) {
     var ctx1 = document.getElementById("total-chart").getContext("2d");
-    ctx1.canvas.height = 90;
+    ctx1.canvas.height = 136;
 
     if ($('body').hasClass('btc-template')) {
       //background-image: linear-gradient(to top, #f2bd42 0%, #fed01a 100%);
@@ -92,7 +92,7 @@ $(document).ready(function () {
   if ($("#total-chart1").length > 0) {
 
     var ctx2 = document.getElementById("total-chart1").getContext("2d");
-    ctx2.canvas.height = 90;
+    ctx2.canvas.height = 136;
 
 
     var empSatOptionsUSD_1 = {

@@ -2679,7 +2679,9 @@ background-color: #3bd647;
     
   }
   th {
+    
     &:first-child {
+    padding: 16px 40px !important;
       border-radius: 6px 0 0 6px;
       
     }
@@ -2722,6 +2724,7 @@ line-height: 1;
     }
     background-color: #ffffff;
      &:first-child {
+    padding: 16px 40px !important;
       border-radius: 6px 0 0 6px;
       
     }
@@ -2736,4 +2739,8 @@ line-height: 1;
   .dataTables_wrapper .dataTables_paginate {
     float: left;
   }
+}
+
+.canvas {
+  max-height: 136px;
 }
