@@ -264,125 +264,339 @@
       left: 0;
     }
   }
+
   .menu-fixed {
     position: fixed;
-       bottom: 4%;
+    bottom: 4%;
     right: 33%;
     transition: .3s;
     height: 65px;
+
     &.m-close {
       right: 12%;
     }
-}
-.chat-btn {
+  }
+
+  .chat-btn {
     bottom: 0%;
     left: 12%;
-}
+  }
+
   .pay-item {
     .title {
       font-size: 14px;
     }
+
     p {
       font-size: 10px;
     }
   }
-  .form-pay label+span {
+
+  .form-pay label + span {
     /*display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 13px;*/
   }
+
   .form-pay label {
     /*display: block;
     margin-left: auto;
     margin-right: auto;*/
-        width: 34vw;
+    width: 34vw;
     font-size: 12px;
+
     input {
-    font-size: 12px;
-          width: 21vw;
+      font-size: 12px;
+      width: 21vw;
     }
   }
+
   .form-pay .btn-broup .button {
-          margin-right: 5px;
+    margin-right: 5px;
   }
-  .form-pay{
+
+  .form-pay {
     .pay-close {
       font-size: 12px;
     }
+
     .button {
       font-size: 12px;
     }
   }
+
   .form-pay .btn-broup {
     text-align: center;
     margin-top: 20px;
-}
+  }
+
   .tab-content {
     text-align: center;
   }
-  
+
   .transactions .header-title {
     position: static;
     margin-bottom: 15px;
   }
+
   .transactions {
     margin-top: 30px;
   }
+
   .exchange .header-title {
     margin-bottom: 15px;
   }
+
   .exchange-form .label {
     margin-bottom: 15px;
   }
+
   .exchange-form .icon {
     margin: 0 auto;
     text-align: center;
     display: block;
     transform: rotate(90deg);
   }
+
   .exchange-form .info-bottom {
     display: block;
     margin-top: 15px;
   }
+
   .exchange-form .button {
     margin-right: 0;
   }
+
   .exchange .table-title {
     position: static;
     margin-top: 30px;
   }
-  .team-td, .team-item .team-td {
-    
+
+  .team-td,
+  .team-item .team-td {
+
     &:nth-child(1) {
       flex: 0 0 30% !important;
-    max-width: 30% !important;
+      max-width: 30% !important;
     }
-    
+
     &:nth-child(2) {
       flex: 0 0 20% !important;
-    max-width: 20% !important;
+      max-width: 20% !important;
     }
-    
+
     &:nth-child(6) {
       flex: 0 0 50% !important;
-    max-width: 50% !important;
+      max-width: 50% !important;
     }
-    &:nth-child(3),&:nth-child(4),&:nth-child(5) {
-display: none;
+
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+      display: none;
     }
   }
+
   .team-item:before {
     width: 100% !important;
   }
+
   .icon-item {
     margin-left: 5px;
   }
+
   .team .search input {
     max-width: 100%;
   }
+
   .ranks-table td a {
     margin-right: 0;
+    display: block;
+  }
+
+  #chartContainer {
+    height: 250px !important;
+  }
+
+  .stock-order .exchange-form .form-box:first-child {
+    max-width: 100%;
+    margin: 0 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .stock-order .exchange-form .label {
+    max-width: 100%;
+    display: block;
+  }
+
+  .stock-order .order-btn {
+    padding: 12px 30px;
+  }
+
+  .stock-order .order-btn.pay {
+    margin-right: 0;
+  }
+
+  .stock-order .exchange-form .form-box:first-child .label input {
+    width: calc(100% - 128px);
+
+    max-width: 100%;
+  }
+
+  .stock-order .exchange-form .form-box {
+    max-width: 100%;
+  }
+
+  .stock-order .exchange-form .label .input-all,
+  .stock-order .exchange-form .label input {
+    width: calc(100% - 128px);
+    max-width: 100%;
+  }
+
+  .stock-order .exchange-form .label span {
+    min-width: 67px;
+    text-align: left;
+  }
+
+  .stock-order .exchange-form .form-box {
+    display: block;
+  }
+
+  .stock-order .exchange-form .label.large .input-all {
+    width: calc(100% - 127px);
+  }
+  #DataTables_Table_4_wrapper {
+    margin-bottom: 30px;
+  }
+  
+  .settings-form .col-left, .settings-form .col-right {
+        -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .verification .label .btn {
+    padding: 12px 12px;
+    width: 82px;
+}
+  .verification .label .input {
+    vertical-align: middle;
+    border: 0;
+    height: 43px;
+    padding: 10px 15px;
+    display: inline-block;
+    width: calc(100% - 83px);
+    color: #ef204c;
+    font-family: "SF Pro Display";
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1;
+}
+  .verification .label .icon {
+    color: #ef204c;
+    font-size: 15px;
+    vertical-align: middle;
+    margin-right: 0;
+}
+  .verification.success .label .input {
+    width: 100%;
+    line-height: 1.4;
+  }
+  .logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .text-right {
+    text-align: center;
+  }
+  .property-title {
+    position: static;
+  }
+  
+  .ladder_ranks-table table.left {
+    margin-top: 52px;
+    border-radius: 3px;
+    width: 132px;
+}
+  .ladder_ranks-table table.left tr td {
+    font-size: 10px;
+}
+  
+  #scroll-tbl {
+       display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+       width: 42vw;
+  }
+  main {
+    overflow-x: hidden;
+  }
+  .ladder_ranks-title {
+    text-align: center;
+  }
+  .ladder_ranks-img {
+    text-align: center;
+  }
+  #reportgraf {
+    max-height: 205px;
+  }
+  .report-table .header-title {
+    position: static;
+    margin-bottom: 20px;
+  }
+  .dataTables_wrapper label {
+    margin-left: 0;
+  }
+  #DataTables_Table_0_length {
+    float: left;
+    label {
+    margin-bottom: 0;
+      
+    }
+  }
+  .dataTables_wrapper .dataTables_filter {
+    margin-top: 0;
+  }
+  table.dataTable.dtr-inline.collapsed>tbody>tr[role=row]>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role=row]>th:first-child:before {
+    top: 9px;
+    left: 4px;
+    height: 14px;
+    width: 14px;
+    display: block;
+    position: absolute;
+   color: #000; 
+   border: 0px solid #fff; 
+   border-radius: 0; 
+   box-shadow: 0 0 ; 
+    box-sizing: content-box;
+    text-align: center;
+    text-indent: 0!important;
+    font-family: 'Courier New',Courier,monospace;
+    line-height: 1;
+   background-color: transparent; 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-35%);
+}
+.report-select select {
+    background-position: 90% center;
+  }
+  .profile {
+    float: left;
+    
+  }
+  .bonus {
+    float: right;
+  }
+  .menu-top {
+    padding: 18px 0;
+  }
+  .dataTables_wrapper .dataTables_paginate {
+    margin-top: 0;
+  }
+  .rang-btn {
     display: block;
   }
 }

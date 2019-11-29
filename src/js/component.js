@@ -156,6 +156,45 @@ $(document).ready(function () {
     new Chart(ctx2, empSatConfigUSD_1);
   }
 
+  if ($("#reportgraf").length > 0) {
+
+    new Chart('reportgraf', {
+      type: 'line',
+      data: {
+        labels: [0, 20, 50, 35, 40, 30, 45, 50, 35, 40, 30, 45, 55, 56, 59, 65, 40, 56, 45, 50, 35, 40, 30, 45],
+        datasets: [{
+          backgroundColor: 'transparent',
+          borderColor: '#2fc738',
+          data: [0, 20, 50, 35, 40, 30, 45, 50, 35, -40, 30, 45, 55, -56, -59, 65, 40, 56, 45, 50, 35, 40, 30, 45],
+          label: 'График монеты',
+          //						fill: boundary
+					}]
+      },
+      options: {
+        maintainAspectRatio: false,
+        spanGaps: false,
+        elements: {
+          line: {
+            tension: 0.000001
+          }
+        },
+        plugins: {
+          filler: {
+            propagate: false
+          }
+        },
+        scales: {
+          xAxes: [{
+            ticks: {
+              autoSkip: false,
+              maxRotation: 0
+            }
+				}]
+        }
+      }
+    });
+  }
+
 
 
   $(".item-scroll").mCustomScrollbar({
@@ -175,6 +214,24 @@ $(document).ready(function () {
   $('#table-deposit').DataTable({
     "dom": '<pft>',
     "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+    "pagingType": "simple_numbers",
+    responsive: true
+  });
+
+  $('.report-table table').dataTable({
+    responsive: true,
+    "dom": '<fltp>'
+  });
+
+
+
+
+
+
+
+  $('#property-table').DataTable({
+    "dom": '<pft>',
+    "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
     "pagingType": "simple_numbers",
     responsive: true
   });
@@ -209,6 +266,27 @@ $(document).ready(function () {
     responsive: true
   });
 
+  $('.order-table table').DataTable({
+    "scrollY": "200px",
+    "pagingType": "simple_numbers",
+    "scrollCollapse": true,
+    "dom": '<t>',
+    "paging": false,
+    responsive: true
+  });
+
+  $('.book-order table').DataTable({
+    "scrollY": "234px",
+    "pagingType": "simple_numbers",
+    "scrollCollapse": true,
+    "dom": '<t>',
+    "paging": false,
+    responsive: true
+  });
+
+  $('.order-table table .icon-arrow-down, .book-order_2 table .icon-arrow-down').each(function () {
+    $(this).parents('tr').addClass('red-bg')
+  })
 
 
 
@@ -443,10 +521,186 @@ $(document).ready(function () {
   })
 
   $('.block-icon').click(function () {
-    $(this).addClass('show-next');
-    $(this).next().css('display', 'flex');
-    
+
+    if ($(this).hasClass('show-next')) {
+      $(this).removeClass('show-next');
+      $(this).next().css('display', 'none');
+      $(this).nextAll().removeClass('show-next');
+      $(this).nextAll().css('display', 'none');
+    } else {
+      $(this).addClass('show-next');
+      $(this).next().css('display', 'flex');
+
+    }
+
+
   })
 
-  //  $('.team-content .team-item').length
+  /*================================================*/
+
+
+  if ($("#chartContainer").length > 0) {
+
+    var dataPoints = [];
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+      animationEnabled: true,
+      theme: "light1", // "light1", "light2", "dark1", "dark2"
+      exportEnabled: true,
+      /*	title: {
+      		text: "Netflix Stock Price in 2016"
+      	},
+      	subtitles: [{
+      		text: "Weekly Averages"
+      	}],*/
+      axisX: {
+        interval: 1,
+        valueFormatString: "MMM"
+      },
+      axisY: {
+        includeZero: false,
+        prefix: "$",
+        title: "Price"
+      },
+      toolTip: {
+        content: "Date: {x}<br /><strong>Price:</strong><br />Open: {y[0]}, Close: {y[3]}<br />High: {y[1]}, Low: {y[2]}"
+      },
+      data: [{
+        type: "candlestick",
+        risingColor: "#2fc738",
+        color: "#fdc825",
+        yValueFormatString: "$##0.00",
+        dataPoints: dataPoints
+	}]
+    });
+
+    $.get("js/netflix-stock-price.csv", getDataPointsFromCSV);
+
+    function getDataPointsFromCSV(csv) {
+      var csvLines = points = [];
+      csvLines = csv.split(/[\r?\n|\r|\n]+/);
+      for (var i = 0; i < csvLines.length; i++) {
+        if (csvLines[i].length > 0) {
+          points = csvLines[i].split(",");
+          dataPoints.push({
+            x: new Date(
+              parseInt(points[0].split("-")[0]),
+              parseInt(points[0].split("-")[1]),
+              parseInt(points[0].split("-")[2])
+            ),
+            y: [
+					parseFloat(points[1]),
+					parseFloat(points[2]),
+					parseFloat(points[3]),
+					parseFloat(points[4])
+				]
+          });
+        }
+      }
+      chart.render();
+    }
+
+    setTimeout(function () {
+      $('.canvasjs-chart-credit').hide();
+    }, 500)
+
+  }
+  /*=================*/
+
+
+  $('#input-price').on('change', function () {
+    var summ = Number($(this).val()) * Number($('#input-amount').val());
+    $('#input-all').text(summ);
+  })
+
+  $('#input-amount').on('change', function () {
+    var summ = Number($(this).val()) * Number($('#input-price').val());
+    $('#input-all').text(summ);
+  })
+
+
+
+  $('.settings-tab a').click(function (e) {
+    e.preventDefault();
+    $('.settings-tab a').removeClass('active');
+    $('.settings-item').removeClass('active');
+    $(this).addClass('active');
+    $($(this).attr('href')).addClass('active');
+  })
+
+
+
+  $('input[type="tel"]').intlTelInput({
+    defaultCountry: "ua",
+    initialCountry: "auto",
+    preferredCountries: ["ua", "ru", 'az', 'am', 'by', 'kz', 'kg', 'md', 'tj', 'uz', 'tm', 'ge'],
+    autoPlaceholder: 'aggressive',
+    nationalMode: false,
+    customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
+      return "+" + selectedCountryData.dialCode;
+    },
+    geoIpLookup: function (success, failure) {
+      /*
+      $.get( "https://ip-api.com/json/", function( data ) {
+      	var countryCode = (data.countryCode) ? data.countryCode : "ru";
+      	success(countryCode);
+      }, "json" );*/
+
+      $.get("https://ipinfo.io", function () {}, "jsonp").always(function (resp) {
+        var countryCode = (resp && resp.country) ? resp.country : "ua";
+        success(countryCode);
+      });
+    },
+    separateDialCode: false,
+    formatOnDisplay: false,
+    //		utilsScript: 'https://mk.beauty-matrix.ru/assets/plugins/intltelinput/js/utils.js',
+  });
+
+
+  $('.check').each(function () {
+    $(this).on('change', function () {
+      var form = $(this).parents('form');
+
+      if ($(this).prop('checked')) {
+
+        form.find('.phone').slideDown();
+      } else {
+        form.find('.phone').slideUp();
+      }
+    });
+  });
+
+  $('.referal-form button').click(function () {
+    var copyText = document.getElementById("referal-link");
+    copyText.select();
+
+    document.execCommand("copy");
+  })
+
+  $('.video').each(function () {
+    $(this).find('img').attr('src', 'http://i1.ytimg.com/vi/' + $(this).data('youtube_id') + '/maxresdefault.jpg')
+  });
+
+  $('.play-btn').click(function () {
+    var $from = $(this);
+    var imgWidth = $from.parents('.video').find('img').width();
+    var imgHeight = $from.parents('.video').find('img').height();
+    $from.parents('.video').find('img').hide();
+    $from.parents('.video').find('.video-bg').hide();
+    $from.hide();
+
+    $from.parents('.video').append('<iframe width="' + imgWidth + '" height="' + imgHeight + '" src="https://www.youtube.com/embed/' + $from.parents(".video").data("youtube_id") + '?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+  })
+  $('.menu-fixed').addClass('m-close');
+
+
+  $('.transfer-form select[name="type"]').change(function(){
+    if($(this).val() == '2') {
+      $('.card-plus').show();
+    }else{
+      $('.card-plus').hide();
+      
+    }
+  })
+
 });

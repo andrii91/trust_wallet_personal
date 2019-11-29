@@ -159,7 +159,7 @@
             </div>
           </div>
           <div class="col-xl-3">
-            <div class="transfer">
+             <div class="transfer">
               <div class="title">Вывод средств</div>
               <div class="subtitle">Укажите сумму, которую желаете вывести </div>
               <form action="#" class="transfer-form">
@@ -169,14 +169,18 @@
                 </div>
                 <div class="label ">
                   <span class="icon icon-wallet"></span>
-                  <select name="" >
-                    <option value="" selected disabled>Visa/Mastercard</option>
+                  <select name="type">
+                    <option value="1"  >BTC</option>
+                    <option value="2" selected >Visa/Mastercard</option>
                   </select>
                 </div>
-                <div class="label ">
+                <div class="label card-plus">
                   <span class="icon icon-credit-card-alt"></span>
-                  <select name="" >
-                    <option value="" selected disabled>Выберите карту</option>
+                  <select name="card">
+                    <option value="0">Выберите карту</option>
+                    <optgroup label="Ukraine Card">
+                      <option value="ua">5218XXXXXXXXXXX0646</option>
+                    </optgroup>
                   </select>
                 </div>
                 <button type="submit" class="button">Перевести</button>

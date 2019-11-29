@@ -148,7 +148,7 @@
               <form action="#" class="transfer-form">
                 <div class="label">
                   <span class="icon">$</span>
-                  <input type="text" name="" placeholder="Сумма в USD" required>
+                  <input type="number" name="" placeholder="Сумма в USD" required>
                 </div>
                 <div class="label mb">
                   <span class="icon icon-email"></span>
@@ -169,14 +169,18 @@
                 </div>
                 <div class="label ">
                   <span class="icon icon-wallet"></span>
-                  <select name="" >
-                    <option value="" selected disabled>Visa/Mastercard</option>
+                  <select name="type">
+                    <option value="1"  >BTC</option>
+                    <option value="2" selected >Visa/Mastercard</option>
                   </select>
                 </div>
-                <div class="label ">
+                <div class="label card-plus">
                   <span class="icon icon-credit-card-alt"></span>
-                  <select name="" >
-                    <option value="" selected disabled>Выберите карту</option>
+                  <select name="card">
+                    <option value="0">Выберите карту</option>
+                    <optgroup label="Ukraine Card">
+                      <option value="ua">5218XXXXXXXXXXX0646</option>
+                    </optgroup>
                   </select>
                 </div>
                 <button type="submit" class="button">Перевести</button>
@@ -201,225 +205,279 @@
                   <th>сумма</th>
                   <th>описание</th>
                   <th>статус</th>
-                  <th>управление                  </th>
+                  <th>управление </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status pending">pending</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status pending">pending</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status error">error</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status error">error</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status error">error</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status error">error</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
                 <tr>
-                 <td>2019-07-01 <span>18:47:09</span></td>
-                 <td><span class="deposit">DEPOSIT</span></td>
-                 <td>410.7486 $</td>
-                 <td>Получение начисления по пакету Standart</td>
-                 <td><div class="status success">success</div></td>
-                 <td><a href="#" class="view">просмотр</a></td>
+                  <td>2019-07-01 <span>18:47:09</span></td>
+                  <td><span class="deposit">DEPOSIT</span></td>
+                  <td>410.7486 $</td>
+                  <td>Получение начисления по пакету Standart</td>
+                  <td>
+                    <div class="status success">success</div>
+                  </td>
+                  <td><a href="#" class="view">просмотр</a></td>
                 </tr>
 
               </tbody>
@@ -437,13 +495,13 @@
       <p>Copyright © 2019 All rights reserved</p>
     </div>
   </footer>
-<ul>
- <li>тест попап</li>
-  <li><a data-popup href="#transaction">transaction</a></li>
-  <li><a data-popup href="#confirmation">confirmation</a></li>
-</ul>
+  <ul>
+    <li>тест попап</li>
+    <li><a data-popup href="#transaction">transaction</a></li>
+    <li><a data-popup href="#confirmation">confirmation</a></li>
+  </ul>
 
-  <div class='menu menu-fixed'>
+  <div class='menu menu-fixed m-close'>
     <input checked='checked' class='menu-toggler' id='menu-toggler' type='checkbox'>
     <label for='menu-toggler'><span class="icon-dollar-symbol"></span></label>
     <ul>
@@ -483,7 +541,7 @@
       </tr>
       <tr>
         <td>Created At</td>
-        <td>2019-11-22   00:00:06</td>
+        <td>2019-11-22 00:00:06</td>
       </tr>
       <tr>
         <td>Type</td>
@@ -541,7 +599,7 @@
         <div class="confirmation-info">
           <p>Вы собираетесь перевести: <span class="green">1 USD</span></p>
           <p>Комиссия: <span class="red"> 0.0049 USD</span></p>
-          <p>Всего будет списано: <span class="red">1.005 USD</span>          </p>
+          <p>Всего будет списано: <span class="red">1.005 USD</span> </p>
         </div>
       </div>
     </div>

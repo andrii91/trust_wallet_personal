@@ -241,96 +241,326 @@
 */
 
 
- [class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
   font-family: "icon";
   font-style: normal;
   font-weight: normal;
   speak: none;
- 
+
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
- 
+
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
- 
+
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
- 
+
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
   margin-left: .2em;
- 
+
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
- 
+
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
+
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
- 
 
-.icon-bitcoin:before { content: '\e800'; } /* '' */
-.icon-credit-card:before { content: '\e801'; } /* '' */
-.icon-error:before { content: '\e802'; } /* '' */
-.icon-arrow-down:before { content: '\e803'; } /* '' */
-.icon-phone:before { content: '\e804'; } /* '' */
-.icon-chat:before { content: '\e805'; } /* '' */
-.icon-dollar-symbol:before { content: '\e806'; } /* '' */
-.icon-dollar:before { content: '\e807'; } /* '' */
-.icon-fast-forward:before { content: '\e808'; } /* '' */
-.icon-giftbox:before { content: '\e809'; } /* '' */
-.icon-graphic-progression:before { content: '\e80a'; } /* '' */
-.icon-growth:before { content: '\e80b'; } /* '' */
-.icon-logout:before { content: '\e80c'; } /* '' */
-.icon-meeting:before { content: '\e80d'; } /* '' */
-.icon-at:before { content: '\e80e'; } /* '' */
-.icon-movie-clapper-open:before { content: '\e80f'; } /* '' */
-.icon-product:before { content: '\e811'; } /* '' */
-.icon-settings-gears:before { content: '\e813'; } /* '' */
-.icon-star:before { content: '\e814'; } /* '' */
-.icon-three-buildings:before { content: '\e815'; } /* '' */
-.icon-wallet:before { content: '\e817'; } /* '' */
-.icon-warning-1:before { content: '\e818'; } /* '' */
-.icon-dollar-1:before { content: '\e819'; } /* '' */
-.icon-exchange:before { content: '\e81a'; } /* '' */
-.icon-left-arrow:before { content: '\e81c'; } /* '' */
-.icon-transfer:before { content: '\e81e'; } /* '' */
-.icon-cool:before { content: '\e820'; } /* '' */
-.icon-copy-item:before { content: '\e821'; } /* '' */
-.icon-email:before { content: '\e822'; } /* '' */
-.icon-icon:before { content: '\e823'; } /* '' */
-.icon-seting:before { content: '\e824'; } /* '' */
-.icon-information:before { content: '\e825'; } /* '' */
-.icon-key:before { content: '\e826'; } /* '' */
-.icon-link:before { content: '\e827'; } /* '' */
-.icon-shield:before { content: '\e82a'; } /* '' */
-.icon-toggle:before { content: '\e82b'; } /* '' */
-.icon-warning:before { content: '\e82d'; } /* '' */
-.icon-group:before { content: '\e82f'; } /* '' */
-.icon-group2:before { content: '\e830'; } /* '' */
-.icon-investor-popup:before { content: '\e832'; } /* '' */
-.icon-minus:before { content: '\e833'; } /* '' */
-.icon-plus:before { content: '\e834'; } /* '' */
-.icon-portfolio:before { content: '\e835'; } /* '' */
-.icon-verified:before { content: '\e836'; } /* '' */
-.icon-diamond:before { content: '\e837'; } /* '' */
-.icon-menu:before { content: '\e83a'; } /* '' */
-.icon-bitcoin-rate:before { content: '\e83c'; } /* '' */
-.icon-wallet-1:before { content: '\e83f'; } /* '' */
-.icon-report:before { content: '\e840'; } /* '' */
-.icon-share:before { content: '\f1e0'; } /* '' */
-.icon-credit-card-alt:before { content: '\f283'; } /* '' */
-.icon-question:before { content: '\f29c'; } /* '' */
+
+.icon-bitcoin:before {
+  content: '\e800';
+}
+
+/* '' */
+.icon-credit-card:before {
+  content: '\e801';
+}
+
+/* '' */
+.icon-error:before {
+  content: '\e802';
+}
+
+/* '' */
+.icon-phone:before {
+  content: '\e804';
+}
+
+/* '' */
+.icon-chat:before {
+  content: '\e805';
+}
+
+/* '' */
+.icon-dollar-symbol:before {
+  content: '\e806';
+}
+
+/* '' */
+.icon-dollar:before {
+  content: '\e807';
+}
+
+/* '' */
+.icon-fast-forward:before {
+  content: '\e808';
+}
+
+/* '' */
+.icon-giftbox:before {
+  content: '\e809';
+}
+
+/* '' */
+.icon-graphic-progression:before {
+  content: '\e80a';
+}
+
+/* '' */
+.icon-growth:before {
+  content: '\e80b';
+}
+
+/* '' */
+.icon-logout:before {
+  content: '\e80c';
+}
+
+/* '' */
+.icon-meeting:before {
+  content: '\e80d';
+}
+
+/* '' */
+.icon-at:before {
+  content: '\e80e';
+}
+
+/* '' */
+.icon-movie-clapper-open:before {
+  content: '\e80f';
+}
+
+/* '' */
+.icon-up:before {
+  content: '\e810';
+}
+
+/* '' */
+.icon-product:before {
+  content: '\e811';
+}
+
+/* '' */
+.icon-cancel:before {
+  content: '\e812';
+}
+
+/* '' */
+.icon-settings-gears:before {
+  content: '\e813';
+}
+
+/* '' */
+.icon-star:before {
+  content: '\e814';
+}
+
+/* '' */
+.icon-three-buildings:before {
+  content: '\e815';
+}
+
+/* '' */
+.icon-arrow-down:before {
+  content: '\e816';
+}
+
+/* '' */
+.icon-wallet:before {
+  content: '\e817';
+}
+
+/* '' */
+.icon-warning-1:before {
+  content: '\e818';
+}
+
+/* '' */
+.icon-dollar-1:before {
+  content: '\e819';
+}
+
+/* '' */
+.icon-exchange:before {
+  content: '\e81a';
+}
+
+/* '' */
+.icon-left-arrow:before {
+  content: '\e81c';
+}
+
+/* '' */
+.icon-transfer:before {
+  content: '\e81e';
+}
+
+/* '' */
+.icon-nocool:before {
+  content: '\e81f';
+}
+
+/* '' */
+.icon-cool:before {
+  content: '\e820';
+}
+
+/* '' */
+.icon-copy-item:before {
+  content: '\e821';
+}
+
+/* '' */
+.icon-email:before {
+  content: '\e822';
+}
+
+/* '' */
+.icon-seting:before {
+  content: '\e824';
+}
+
+/* '' */
+.icon-information:before {
+  content: '\e825';
+}
+
+/* '' */
+.icon-key:before {
+  content: '\e826';
+}
+
+/* '' */
+.icon-link:before {
+  content: '\e827';
+}
+
+/* '' */
+.icon-shield:before {
+  content: '\e82a';
+}
+
+/* '' */
+.icon-toggle:before {
+  content: '\e82b';
+}
+
+/* '' */
+.icon-warning:before {
+  content: '\e82d';
+}
+
+/* '' */
+.icon-group:before {
+  content: '\e82f';
+}
+
+/* '' */
+.icon-group2:before {
+  content: '\e830';
+}
+
+/* '' */
+.icon-investor-popup:before {
+  content: '\e832';
+}
+
+/* '' */
+.icon-minus:before {
+  content: '\e833';
+}
+
+/* '' */
+.icon-plus:before {
+  content: '\e834';
+}
+
+/* '' */
+.icon-portfolio:before {
+  content: '\e835';
+}
+
+/* '' */
+.icon-verified:before {
+  content: '\e836';
+}
+
+/* '' */
+.icon-diamond:before {
+  content: '\e837';
+}
+
+/* '' */
+.icon-menu:before {
+  content: '\e83a';
+}
+
+/* '' */
+.icon-bitcoin-rate:before {
+  content: '\e83c';
+}
+
+/* '' */
+.icon-wallet-1:before {
+  content: '\e83f';
+}
+
+/* '' */
+.icon-report:before {
+  content: '\e840';
+}
+
+/* '' */
+.icon-edit:before {
+  content: '\f14b';
+}
+
+/* '' */
+.icon-share:before {
+  content: '\f1e0';
+}
+
+/* '' */
+.icon-credit-card-alt:before {
+  content: '\f283';
+}
+
+/* '' */
+.icon-question:before {
+  content: '\f29c';
+}
+
+/* '' */
+
+
 @import 'info/bootstrap';
-.icon-diamond:before {transform: rotate(180deg);}
+
+.icon-diamond:before {
+  transform: rotate(180deg);
+}
+
 /*
  * DOM element rendering detection
  * https://davidwalsh.name/detect-node-insertion
@@ -2519,7 +2749,7 @@ table.dataTable td {
 }
 
 .dataTables_wrapper .dataTables_length {
-  float: left
+  float: right
 }
 
 .dataTables_wrapper .dataTables_filter {
@@ -2537,10 +2767,11 @@ table.dataTable td {
   border-radius: 3px;
   background-color: #ffffff;
   border: 0;
-  background-image: url('../images/s.png');
+  background-image: url('../images/s.svg');
   background-repeat: no-repeat;
   background-position: 8px center;
   padding-left: 25px;
+  background-size: 13px;
 }
 
 .dataTables_wrapper .dataTables_info {
@@ -2721,14 +2952,16 @@ table.dataTable td {
 .paginate_button.previous {
   .icon-fast-forward {
     font-size: 8px;
-color: #b3bcc9;
+    color: #b3bcc9;
+
     &:before {
       transform: rotate(180deg);
     }
   }
+
   &:hover {
     .icon-fast-forward {
-    color: #fff;
+      color: #fff;
     }
   }
 
@@ -2741,15 +2974,42 @@ color: #b3bcc9;
     color: #b3bcc9;
     font-size: 8px;
   }
+
   &:hover {
     .icon-fast-forward {
-    color: #fff;
+      color: #fff;
     }
   }
 }
 
 .dataTables_wrapper label {
   margin-bottom: 17px;
+  color: #030303;
+  font-family: "SF Pro Display";
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1;
+  margin-left: 36px;
+
+  select {
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none !important;
+    -moz-appearance: none;
+    color: #030303;
+    font-family: "SF Pro Display";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    background-color: #fff;
+    border: 0;
+    padding: 7px 12px;
+    background-image: url('../images/sel.svg');
+    background-position: 85% center;
+    background-repeat: no-repeat;
+    width: 59px;
+  }
 }
 
 /**
@@ -2769,24 +3029,28 @@ Build date: 2018-12-12 00:07:25
   font-size: 12px;
   font-family: Arial, sans-serif;
 }
+
 .irs-line {
   position: relative;
   display: block;
   overflow: hidden;
   outline: none !important;
 }
+
 .irs-bar {
   position: absolute;
   display: block;
   left: 0;
   width: 0;
 }
+
 .irs-shadow {
   position: absolute;
   display: none;
   left: 0;
   width: 0;
 }
+
 .irs-handle {
   position: absolute;
   display: block;
@@ -2794,21 +3058,26 @@ Build date: 2018-12-12 00:07:25
   cursor: default;
   z-index: 1;
 }
+
 .irs-handle.type_last {
   z-index: 2;
 }
+
 .irs-min,
 .irs-max {
   position: absolute;
   display: block;
   cursor: default;
 }
+
 .irs-min {
   left: 0;
 }
+
 .irs-max {
   right: 0;
 }
+
 .irs-from,
 .irs-to,
 .irs-single {
@@ -2819,6 +3088,7 @@ Build date: 2018-12-12 00:07:25
   cursor: default;
   white-space: nowrap;
 }
+
 .irs-grid {
   position: absolute;
   display: none;
@@ -2827,9 +3097,11 @@ Build date: 2018-12-12 00:07:25
   width: 100%;
   height: 20px;
 }
+
 .irs-with-grid .irs-grid {
   display: block;
 }
+
 .irs-grid-pol {
   position: absolute;
   top: 0;
@@ -2838,9 +3110,11 @@ Build date: 2018-12-12 00:07:25
   height: 8px;
   background: #000;
 }
+
 .irs-grid-pol.small {
   height: 6px;
 }
+
 .irs-grid-text {
   position: absolute;
   bottom: 0;
@@ -2852,6 +3126,7 @@ Build date: 2018-12-12 00:07:25
   padding: 0 3px;
   color: #000;
 }
+
 .irs-disable-mask {
   position: absolute;
   display: block;
@@ -2863,14 +3138,17 @@ Build date: 2018-12-12 00:07:25
   background: rgba(0, 0, 0, 0);
   z-index: 2;
 }
+
 .lt-ie9 .irs-disable-mask {
   background: #000;
   filter: alpha(opacity=0);
   cursor: not-allowed;
 }
+
 .irs-disabled {
   opacity: 0.4;
 }
+
 .irs-hidden-input {
   position: absolute !important;
   display: block !important;
@@ -2889,37 +3167,45 @@ Build date: 2018-12-12 00:07:25
   border-style: solid !important;
   border-color: transparent !important;
 }
+
 .irs--flat {
   height: 40px;
 }
+
 .irs--flat.irs-with-grid {
   height: 60px;
 }
+
 .irs--flat .irs-line {
   top: 25px;
   height: 12px;
   background-color: #e1e4e9;
   border-radius: 4px;
 }
+
 .irs--flat .irs-bar {
   top: 25px;
   height: 12px;
   background-color: #ed5565;
 }
+
 .irs--flat .irs-bar--single {
   border-radius: 4px 0 0 4px;
 }
+
 .irs--flat .irs-shadow {
   height: 1px;
   bottom: 16px;
   background-color: #e1e4e9;
 }
+
 .irs--flat .irs-handle {
   top: 22px;
   width: 16px;
   height: 18px;
   background-color: transparent;
 }
+
 .irs--flat .irs-handle > i:first-child {
   position: absolute;
   display: block;
@@ -2930,10 +3216,12 @@ Build date: 2018-12-12 00:07:25
   margin-left: -1px;
   background-color: #da4453;
 }
+
 .irs--flat .irs-handle.state_hover > i:first-child,
 .irs--flat .irs-handle:hover > i:first-child {
   background-color: #a43540;
 }
+
 .irs--flat .irs-min,
 .irs--flat .irs-max {
   top: 0;
@@ -2945,6 +3233,7 @@ Build date: 2018-12-12 00:07:25
   background-color: #e1e4e9;
   border-radius: 4px;
 }
+
 .irs--flat .irs-from,
 .irs--flat .irs-to,
 .irs--flat .irs-single {
@@ -2956,6 +3245,7 @@ Build date: 2018-12-12 00:07:25
   background-color: #ed5565;
   border-radius: 4px;
 }
+
 .irs--flat .irs-from:before,
 .irs--flat .irs-to:before,
 .irs--flat .irs-single:before {
@@ -2971,18 +3261,23 @@ Build date: 2018-12-12 00:07:25
   border: 3px solid transparent;
   border-top-color: #ed5565;
 }
+
 .irs--flat .irs-grid-pol {
   background-color: #e1e4e9;
 }
+
 .irs--flat .irs-grid-text {
   color: #999;
 }
+
 .irs--big {
   height: 55px;
 }
+
 .irs--big.irs-with-grid {
   height: 70px;
 }
+
 .irs--big .irs-line {
   top: 33px;
   height: 12px;
@@ -2991,6 +3286,7 @@ Build date: 2018-12-12 00:07:25
   border: 1px solid #ccc;
   border-radius: 12px;
 }
+
 .irs--big .irs-bar {
   top: 33px;
   height: 12px;
@@ -2999,14 +3295,17 @@ Build date: 2018-12-12 00:07:25
   background: linear-gradient(to bottom, #ffffff 0%, #428bca 30%, #b9d4ec 100%);
   box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.5);
 }
+
 .irs--big .irs-bar--single {
   border-radius: 12px 0 0 12px;
 }
+
 .irs--big .irs-shadow {
   height: 1px;
   bottom: 16px;
   background-color: rgba(66, 139, 202, 0.5);
 }
+
 .irs--big .irs-handle {
   top: 25px;
   width: 30px;
@@ -3017,12 +3316,14 @@ Build date: 2018-12-12 00:07:25
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), inset 0 0 3px 1px white;
   border-radius: 30px;
 }
+
 .irs--big .irs-handle.state_hover,
 .irs--big .irs-handle:hover {
   border-color: rgba(0, 0, 0, 0.45);
   background-color: #939ba7;
   background: linear-gradient(to bottom, white 0%, #919BA5 30%, white 100%);
 }
+
 .irs--big .irs-min,
 .irs--big .irs-max {
   top: 0;
@@ -3032,6 +3333,7 @@ Build date: 2018-12-12 00:07:25
   background-color: #9f9f9f;
   border-radius: 3px;
 }
+
 .irs--big .irs-from,
 .irs--big .irs-to,
 .irs--big .irs-single {
@@ -3042,18 +3344,23 @@ Build date: 2018-12-12 00:07:25
   background: linear-gradient(to bottom, #428bca 0%, #3071a9 100%);
   border-radius: 3px;
 }
+
 .irs--big .irs-grid-pol {
   background-color: #428bca;
 }
+
 .irs--big .irs-grid-text {
   color: #428bca;
 }
+
 .irs--modern {
   height: 55px;
 }
+
 .irs--modern.irs-with-grid {
   height: 55px;
 }
+
 .irs--modern .irs-line {
   top: 25px;
   height: 5px;
@@ -3063,20 +3370,24 @@ Build date: 2018-12-12 00:07:25
   border-bottom-width: 0;
   border-radius: 5px;
 }
+
 .irs--modern .irs-bar {
   top: 25px;
   height: 5px;
   background: #2fc738;
-//  background: linear-gradient(to bottom, #20b426 0%, #18891d 100%);
+  //  background: linear-gradient(to bottom, #20b426 0%, #18891d 100%);
 }
+
 .irs--modern .irs-bar--single {
   border-radius: 5px 0 0 5px;
 }
+
 .irs--modern .irs-shadow {
   height: 1px;
   bottom: 21px;
   background-color: rgba(209, 214, 224, 0.5);
 }
+
 .irs--modern .irs-handle {
   top: 37px;
   width: 12px;
@@ -3086,6 +3397,7 @@ Build date: 2018-12-12 00:07:25
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 3px 3px;
 }
+
 .irs--modern .irs-handle > i:nth-child(1) {
   position: absolute;
   display: block;
@@ -3097,6 +3409,7 @@ Build date: 2018-12-12 00:07:25
   background: white;
   transform: rotate(45deg);
 }
+
 .irs--modern .irs-handle > i:nth-child(2) {
   position: absolute;
   display: block;
@@ -3109,6 +3422,7 @@ Build date: 2018-12-12 00:07:25
   background: linear-gradient(to bottom, white 0%, #e9e6e6 100%);
   border-radius: 0 0 3px 3px;
 }
+
 .irs--modern .irs-handle > i:nth-child(3) {
   position: absolute;
   display: block;
@@ -3120,20 +3434,24 @@ Build date: 2018-12-12 00:07:25
   border-left: 1px solid #a3adc1;
   border-right: 1px solid #a3adc1;
 }
+
 .irs--modern .irs-handle.state_hover,
 .irs--modern .irs-handle:hover {
   border-color: #7685a2;
   background: #c3c7cd;
   background: linear-gradient(to bottom, #ffffff 0%, #919ba5 30%, #ffffff 100%);
 }
+
 .irs--modern .irs-handle.state_hover > i:nth-child(1),
 .irs--modern .irs-handle:hover > i:nth-child(1) {
   border-color: #7685a2;
 }
+
 .irs--modern .irs-handle.state_hover > i:nth-child(3),
 .irs--modern .irs-handle:hover > i:nth-child(3) {
   border-color: #48536a;
 }
+
 .irs--modern .irs-min,
 .irs--modern .irs-max {
   top: 0;
@@ -3145,6 +3463,7 @@ Build date: 2018-12-12 00:07:25
   background-color: #d1d6e0;
   border-radius: 5px;
 }
+
 .irs--modern .irs-from,
 .irs--modern .irs-to,
 .irs--modern .irs-single {
@@ -3156,6 +3475,7 @@ Build date: 2018-12-12 00:07:25
   color: white;
   border-radius: 5px;
 }
+
 .irs--modern .irs-from:before,
 .irs--modern .irs-to:before,
 .irs--modern .irs-single:before {
@@ -3171,49 +3491,60 @@ Build date: 2018-12-12 00:07:25
   border: 3px solid transparent;
   border-top-color: #20b426;
 }
+
 .irs--modern .irs-grid {
   height: 25px;
 }
+
 .irs--modern .irs-grid-pol {
   background-color: #dedede;
 }
+
 .irs--modern .irs-grid-text {
   color: silver;
   font-size: 13px;
 }
+
 .irs--sharp {
   height: 50px;
   font-size: 12px;
   line-height: 1;
 }
+
 .irs--sharp.irs-with-grid {
   height: 57px;
 }
+
 .irs--sharp .irs-line {
   top: 30px;
   height: 2px;
   background-color: black;
   border-radius: 2px;
 }
+
 .irs--sharp .irs-bar {
   top: 30px;
   height: 2px;
   background-color: #ee22fa;
 }
+
 .irs--sharp .irs-bar--single {
   border-radius: 2px 0 0 2px;
 }
+
 .irs--sharp .irs-shadow {
   height: 1px;
   bottom: 21px;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 .irs--sharp .irs-handle {
   top: 25px;
   width: 10px;
   height: 10px;
   background-color: #a804b2;
 }
+
 .irs--sharp .irs-handle > i:first-child {
   position: absolute;
   display: block;
@@ -3224,14 +3555,17 @@ Build date: 2018-12-12 00:07:25
   border: 5px solid transparent;
   border-top-color: #a804b2;
 }
+
 .irs--sharp .irs-handle.state_hover,
 .irs--sharp .irs-handle:hover {
   background-color: black;
 }
+
 .irs--sharp .irs-handle.state_hover > i:first-child,
 .irs--sharp .irs-handle:hover > i:first-child {
   border-top-color: black;
 }
+
 .irs--sharp .irs-min,
 .irs--sharp .irs-max {
   color: white;
@@ -3243,6 +3577,7 @@ Build date: 2018-12-12 00:07:25
   background-color: #a804b2;
   border-radius: 2px;
 }
+
 .irs--sharp .irs-from,
 .irs--sharp .irs-to,
 .irs--sharp .irs-single {
@@ -3254,6 +3589,7 @@ Build date: 2018-12-12 00:07:25
   color: white;
   border-radius: 2px;
 }
+
 .irs--sharp .irs-from:before,
 .irs--sharp .irs-to:before,
 .irs--sharp .irs-single:before {
@@ -3269,57 +3605,69 @@ Build date: 2018-12-12 00:07:25
   border: 3px solid transparent;
   border-top-color: #a804b2;
 }
+
 .irs--sharp .irs-grid {
   height: 25px;
 }
+
 .irs--sharp .irs-grid-pol {
   background-color: #dedede;
 }
+
 .irs--sharp .irs-grid-text {
   color: silver;
   font-size: 13px;
 }
+
 .irs--round {
   width: 312px;
   height: 18px;
   border: 1px solid #e2e2e2;
   background-color: #ffffff;
 }
+
 .irs--round.irs-with-grid {
   height: 65px;
 }
+
 .irs--round .irs-line {
-    top: 2px;
-    background-color: #fff;
-    border-radius: 0;
-    height: 12px;
+  top: 2px;
+  background-color: #fff;
+  border-radius: 0;
+  height: 12px;
 }
+
 .irs--round .irs-bar {
-    top: 2px;
-    border-radius: 0;
-    height: 12px;
+  top: 2px;
+  border-radius: 0;
+  height: 12px;
   background-color: #2fc738;
 }
+
 .irs--round .irs-bar--single {
   border-radius: 0;
 }
+
 .irs--round .irs-shadow {
   height: 6px;
   bottom: 21px;
   background-color: rgba(222, 228, 236, 0.5);
 }
+
 .irs--round .irs-handle {
-    top: -5px;
-    width: 25px;
-    height: 25px;
-    background-color: #fff;
-    border-radius: 25px;
-    box-shadow: 0 1px 3px rgba(0,0,255,.3);
+  top: -5px;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 1px 3px rgba(0, 0, 255, .3);
 }
+
 .irs--round .irs-handle.state_hover,
 .irs--round .irs-handle:hover {
   background-color: #f0f6ff;
 }
+
 .irs--round .irs-min,
 .irs--round .irs-max {
   color: #333;
@@ -3330,6 +3678,7 @@ Build date: 2018-12-12 00:07:25
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
+
 .irs--round .irs-from,
 .irs--round .irs-to,
 .irs--round .irs-single {
@@ -3341,6 +3690,7 @@ Build date: 2018-12-12 00:07:25
   color: white;
   border-radius: 4px;
 }
+
 .irs--round .irs-from:before,
 .irs--round .irs-to:before,
 .irs--round .irs-single:before {
@@ -3356,37 +3706,46 @@ Build date: 2018-12-12 00:07:25
   border: 3px solid transparent;
   border-top-color: #006cfa;
 }
+
 .irs--round .irs-grid {
   height: 25px;
 }
+
 .irs--round .irs-grid-pol {
   background-color: #dedede;
 }
+
 .irs--round .irs-grid-text {
   color: silver;
   font-size: 13px;
 }
+
 .irs--square {
   height: 50px;
 }
+
 .irs--square.irs-with-grid {
   height: 60px;
 }
+
 .irs--square .irs-line {
   top: 31px;
   height: 6px;
   background-color: #dedede;
 }
+
 .irs--square .irs-bar {
   top: 31px;
   height: 6px;
   background-color: black;
 }
+
 .irs--square .irs-shadow {
   height: 2px;
   bottom: 21px;
   background-color: #dedede;
 }
+
 .irs--square .irs-handle {
   top: 25px;
   width: 16px;
@@ -3397,10 +3756,12 @@ Build date: 2018-12-12 00:07:25
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 .irs--square .irs-handle.state_hover,
 .irs--square .irs-handle:hover {
   background-color: #f0f6ff;
 }
+
 .irs--square .irs-min,
 .irs--square .irs-max {
   color: #333;
@@ -3410,6 +3771,7 @@ Build date: 2018-12-12 00:07:25
   padding: 3px 5px;
   background-color: rgba(0, 0, 0, 0.1);
 }
+
 .irs--square .irs-from,
 .irs--square .irs-to,
 .irs--square .irs-single {
@@ -3420,12 +3782,15 @@ Build date: 2018-12-12 00:07:25
   background-color: black;
   color: white;
 }
+
 .irs--square .irs-grid {
   height: 25px;
 }
+
 .irs--square .irs-grid-pol {
   background-color: #dedede;
 }
+
 .irs--square .irs-grid-text {
   color: silver;
   font-size: 11px;
@@ -3441,14 +3806,15 @@ Build date: 2018-12-12 00:07:25
   right: 0;
   left: 0;
   margin: auto;
-width: 62px;
-height: 62px;
+  width: 62px;
+  height: 62px;
   z-index: 2;
   opacity: 0;
   cursor: pointer;
 }
+
 .menu-toggler:hover + label {
- background-color: #ffba00;
+  background-color: #ffba00;
 
 }
 
@@ -3456,6 +3822,7 @@ height: 62px;
   background-color: #ffba00;
 
 }
+
 /*.menu-toggler:checked + label:before, .menu-toggler:checked + label:after {
   top: 0;
   width: 40px;
@@ -3474,22 +3841,26 @@ height: 62px;
 .menu-toggler:checked ~ ul .menu-item {
   opacity: 1;
 }
+
 .menu-toggler:checked ~ ul .menu-item:nth-child(1) {
   -webkit-transform: rotate(0deg) translateX(-80px);
-          transform: rotate(0deg) translateX(-80px);
+  transform: rotate(0deg) translateX(-80px);
 }
+
 .menu-toggler:checked ~ ul .menu-item:nth-child(2) {
   -webkit-transform: rotate(90deg) translateX(-80px);
-          transform: rotate(90deg) translateX(-80px);
+  transform: rotate(90deg) translateX(-80px);
 }
+
 /*.menu-toggler:checked ~ ul .menu-item:nth-child(3) {
   -webkit-transform: rotate(120deg) translateX(-80px);
           transform: rotate(120deg) translateX(-80px);
 }*/
 .menu-toggler:checked ~ ul .menu-item:nth-child(3) {
   -webkit-transform: rotate(180deg) translateX(-80px);
-          transform: rotate(180deg) translateX(-80px);
+  transform: rotate(180deg) translateX(-80px);
 }
+
 /*.menu-toggler:checked ~ ul .menu-item:nth-child(5) {
   -webkit-transform: rotate(240deg) translateX(-80px);
           transform: rotate(240deg) translateX(-80px);
@@ -3503,18 +3874,18 @@ height: 62px;
 }
 
 .menu-toggler + label {
-width: 62px;
-height: 62px;
-box-shadow: 0 7px 16px rgba(255, 186, 0, 0.43);
-background-color: #ffba00;
+  width: 62px;
+  height: 62px;
+  box-shadow: 0 7px 16px rgba(255, 186, 0, 0.43);
+  background-color: #ffba00;
   border-radius: 50%;
   position: absolute;
-display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   top: 0;
   bottom: 0;
   right: 0;
@@ -3523,6 +3894,7 @@ display: -ms-flexbox;
   font-size: 34px;
   color: #ffffff;
 }
+
 /*.menu-toggler + label:before, .menu-toggler + label:after {
   width: 40px;
   height: 5px;
@@ -3546,12 +3918,12 @@ display: -ms-flexbox;
 
 .menu-item:nth-child(1) a {
   -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .menu-item:nth-child(2) a {
   -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 /*
@@ -3563,7 +3935,7 @@ display: -ms-flexbox;
 
 .menu-item:nth-child(3) a {
   -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 /*
@@ -3594,40 +3966,51 @@ display: -ms-flexbox;
 }
 
 .menu-item a {
-display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
-box-shadow: 0 7px 16px rgba(134, 134, 132, 0.17);
-background-color: #ffffff;
+  box-shadow: 0 7px 16px rgba(134, 134, 132, 0.17);
+  background-color: #ffffff;
   border-radius: 50%;
   text-align: center;
   text-decoration: none;
   font-size: 20px;
   pointer-events: none;
-  transition: .2s;
+  transition: .3s;
   width: 62px;
-height: 62px;
-box-shadow: 0 7px 16px rgba(134, 134, 132, 0.17);
-background-color: #ffffff;
+  height: 62px;
+  box-shadow: 0 7px 16px rgba(134, 134, 132, 0.17);
+  background-color: #ffffff;
   color: #878b93;
 }
+
 .menu-item a:hover {
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
-  color: #000;
-  background: rgba(255, 255, 255, 0.3);
-  font-size: 44.4444444444px;
+  color: #fff;
+    background-color: rgba(52, 211, 65, 1);
+    font-size: 32px;
+
 }
 
 .menu-fixed {
   position: fixed;
   bottom: 10%;
   right: 8%;
-z-index: 99999;
-  
+  z-index: 99999;
+
+  .icon-dollar-symbol {
+    transition: 1s;
+  }
+
+  &:hover {
+    .icon-dollar-symbol {
+      transform: rotate(360deg);
+    }
+  }
 }
 
 
@@ -4087,29 +4470,33 @@ screen and (max-height: 300px) {
 
 
 .mfp-fade.mfp-bg {
-	opacity: 0;
-	-webkit-transition: all 0.15s ease-out; 
-	-moz-transition: all 0.15s ease-out; 
-	transition: all 0.15s ease-out;
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
 }
+
 .mfp-fade.mfp-bg.mfp-ready {
-	opacity: 0.8;
+  opacity: 0.8;
 }
+
 .mfp-fade.mfp-bg.mfp-removing {
-	opacity: 0;
+  opacity: 0;
 }
 
 .mfp-fade.mfp-wrap .mfp-content {
-	opacity: 0;
-	-webkit-transition: all 0.15s ease-out; 
-	-moz-transition: all 0.15s ease-out; 
-	transition: all 0.15s ease-out;
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
 }
+
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-	opacity: 1;
+  opacity: 1;
 }
+
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-	opacity: 0;
+  opacity: 0;
 }
 
 
@@ -4129,29 +4516,29 @@ $close-button-background: #d33333 !default;
 // Mixins
 //
 @mixin control() {
-	display: block;
-	position: absolute;
-	color: $control-button-color;
-	border: 2px solid white;
-	border-radius: 14px;
-	box-shadow: 0 0 3px #444;
-	box-sizing: content-box;
-	text-align: center;
-	text-indent: 0 !important;
+  display: block;
+  position: absolute;
+  color: $control-button-color;
+  border: 2px solid white;
+  border-radius: 14px;
+  box-shadow: 0 0 3px #444;
+  box-sizing: content-box;
+  text-align: center;
+  text-indent: 0 !important;
 
-	// Use Courier New because it is common and consistent
-	font-family: 'Courier New', Courier, monospace;
-	line-height: 14px;
+  // Use Courier New because it is common and consistent
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 14px;
 }
 
 @mixin control-open() {
-	content: '+';
-	background-color: $open-button-background;
+  content: '+';
+  background-color: $open-button-background;
 }
 
 @mixin control-close() {
-	content: '-';
-	background-color: $close-button-background;
+  content: '-';
+  background-color: $close-button-background;
 }
 
 
@@ -4159,197 +4546,1737 @@ $close-button-background: #d33333 !default;
 // Table styles
 //
 table.dataTable {
-	// Styling for the `inline` type
-	&.dtr-inline.collapsed > tbody {
-		> tr {
-			> td.child,
-			> th.child,
-			> td.dataTables_empty {
-				cursor: default !important;
 
-				&:before {
-					display: none !important;
-				}
-			}
-		}
+  // Styling for the `inline` type
+  &.dtr-inline.collapsed > tbody {
+    > tr {
 
-		> tr[role="row"] > td:first-child,
-		> tr[role="row"] > th:first-child {
-			position: relative;
-			padding-left: 30px;
-			cursor: pointer;
+      > td.child,
+      > th.child,
+      > td.dataTables_empty {
+        cursor: default !important;
 
-			&:before {
-				top: $control-button-top;
-				left: 4px;
-				height: $control-button-size;
-				width: $control-button-size;
-				@include control;
-				@include control-open;
-			}
-		}
+        &:before {
+          display: none !important;
+        }
+      }
+    }
 
-		> tr.parent {
-			> td:first-child:before,
-			> th:first-child:before {
-				@include control-close;
-			}
-		}
-	}
+    > tr[role="row"] > td:first-child,
+    > tr[role="row"] > th:first-child {
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
 
-	// DataTables' `compact` styling
-	&.dtr-inline.collapsed.compact > tbody {
-		> tr > td:first-child,
-		> tr > th:first-child {
-			padding-left: 27px;
+      &:before {
+        top: $control-button-top;
+        left: 4px;
+        height: $control-button-size;
+        width: $control-button-size;
+        @include control;
+        @include control-open;
+      }
+    }
 
-			&:before {
-				top: 5px;
-				left: 4px;
-				height: 14px;
-				width: 14px;
-				border-radius: 14px;
-				line-height: 14px;
-				text-indent: 3px;
-			}
-		}
-	}
+    > tr.parent {
 
+      > td:first-child:before,
+      > th:first-child:before {
+        @include control-close;
+      }
+    }
+  }
 
-	// Styling for the `column` type
-	&.dtr-column > tbody {
-		> tr > td.control,
-		> tr > th.control {
-			position: relative;
-			cursor: pointer;
+  // DataTables' `compact` styling
+  &.dtr-inline.collapsed.compact > tbody {
 
-			&:before {
-				top: 50%;
-				left: 50%;
-				height: 16px;
-				width: 16px;
-				margin-top: -10px;
-				margin-left: -10px;
-				@include control;
-				@include control-open;
-			}
-		}
+    > tr > td:first-child,
+    > tr > th:first-child {
+      padding-left: 27px;
 
-		> tr.parent {
-			td.control:before,
-			th.control:before {
-				@include control-close;
-			}
-		}
-	}
+      &:before {
+        top: 5px;
+        left: 4px;
+        height: 14px;
+        width: 14px;
+        border-radius: 14px;
+        line-height: 14px;
+        text-indent: 3px;
+      }
+    }
+  }
 
 
-	// Child row styling
-	> tbody > tr.child {
-		padding: 0.5em 1em;
+  // Styling for the `column` type
+  &.dtr-column > tbody {
 
-		&:hover {
-			background: transparent !important;
-		}
+    > tr > td.control,
+    > tr > th.control {
+      position: relative;
+      cursor: pointer;
 
-		ul.dtr-details {
-			display: inline-block;
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
+      &:before {
+        top: 50%;
+        left: 50%;
+        height: 16px;
+        width: 16px;
+        margin-top: -10px;
+        margin-left: -10px;
+        @include control;
+        @include control-open;
+      }
+    }
 
-			> li {
-				border-bottom: 1px solid #efefef;
-				padding: 0.5em 0;
+    > tr.parent {
 
-				&:first-child {
-					padding-top: 0;
-				}
+      td.control:before,
+      th.control:before {
+        @include control-close;
+      }
+    }
+  }
 
-				&:last-child {
-					border-bottom: none;
-				}
-			}
-		}
 
-		span.dtr-title {
-			display: inline-block;
-			min-width: 75px;
-			font-weight: bold;
-		}
+  // Child row styling
+  > tbody > tr.child {
+    padding: 0.5em 1em;
 
-		span.dtr-data {}
-	}
+    &:hover {
+      background: transparent !important;
+    }
+
+    ul.dtr-details {
+      display: inline-block;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      > li {
+        border-bottom: 1px solid #efefef;
+        padding: 0.5em 0;
+
+        &:first-child {
+          padding-top: 0;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    span.dtr-title {
+      display: inline-block;
+      min-width: 75px;
+      font-weight: bold;
+    }
+
+    span.dtr-data {}
+  }
 }
 
 
 div.dtr-modal {
-	position: fixed;
-	box-sizing: border-box;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 
-	z-index: 100;
-	padding: 10em 1em;
+  z-index: 100;
+  padding: 10em 1em;
 
-	div.dtr-modal-display {
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		width: 50%;
-		height: 50%;
-		overflow: auto;
-		margin: auto;
-		z-index: 102;
-		overflow: auto;
-		background-color: #f5f5f7;
-		border: 1px solid black;
-		border-radius: 0.5em;
-		box-shadow: 0 12px 30px rgba(0,0,0,0.6);
-	}
+  div.dtr-modal-display {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    margin: auto;
+    z-index: 102;
+    overflow: auto;
+    background-color: #f5f5f7;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  }
 
-	div.dtr-modal-content {
-		position: relative;
-		padding: 1em;
-	}
+  div.dtr-modal-content {
+    position: relative;
+    padding: 1em;
+  }
 
-	div.dtr-modal-close {
-		position: absolute;
-		top: 6px;
-		right: 6px;
-		width: 22px;
-		height: 22px;
-		border: 1px solid #eaeaea;
-		background-color: #f9f9f9;
-		text-align: center;
-		border-radius: 3px;
-		cursor: pointer;
-		z-index: 12;
+  div.dtr-modal-close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #eaeaea;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 12;
 
-		&:hover {
-			background-color: #eaeaea;
-		}
-	}
+    &:hover {
+      background-color: #eaeaea;
+    }
+  }
 
-	div.dtr-modal-background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		z-index: 101;
+  div.dtr-modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
 
-		background: rgba(0,0,0,0.6);
-	}
+    background: rgba(0, 0, 0, 0.6);
+  }
 }
 
 
 @media screen and (max-width: 767px) {
-	div.dtr-modal div.dtr-modal-display {
-		width: 95%;
-	}
+  div.dtr-modal div.dtr-modal-display {
+    width: 95%;
+  }
+}
+
+
+
+.intl-tel-input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.intl-tel-input * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.intl-tel-input .hide {
+  display: none;
+}
+
+.intl-tel-input .v-hide {
+  visibility: hidden;
+}
+
+.intl-tel-input input,
+.intl-tel-input input[type=text],
+.intl-tel-input input[type=tel] {
+  position: relative;
+  z-index: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-right: 36px;
+  margin-right: 0;
+}
+
+.intl-tel-input .flag-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 1px;
+}
+
+.intl-tel-input .selected-flag {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 6px 0 8px;
+  border-right: 1px solid #d5dce4;
+}
+
+.intl-tel-input .selected-flag .iti-arrow {
+  margin-left: 6px;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 4px solid #555;
+}
+
+.intl-tel-input .selected-flag .iti-arrow.up {
+  border-top: none;
+  border-bottom: 4px solid #555;
+}
+
+.intl-tel-input .country-list {
+  position: absolute;
+  z-index: 2;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 0 -1px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border: 1px solid #CCC;
+  white-space: nowrap;
+  max-height: 200px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.intl-tel-input .country-list.dropup {
+  bottom: 100%;
+  margin-bottom: -1px;
+}
+
+.intl-tel-input .country-list .flag-box {
+  display: inline-block;
+  width: 20px;
+}
+
+@media (max-width: 500px) {
+  .intl-tel-input .country-list {
+    white-space: normal;
+  }
+}
+
+.intl-tel-input .country-list .divider {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #CCC;
+}
+
+.intl-tel-input .country-list .country {
+  padding: 5px 10px;
+}
+
+.intl-tel-input .country-list .country .dial-code {
+  color: #999;
+}
+
+.intl-tel-input .country-list .country.highlight {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.intl-tel-input .country-list .flag-box,
+.intl-tel-input .country-list .country-name,
+.intl-tel-input .country-list .dial-code {
+  vertical-align: middle;
+}
+
+.intl-tel-input .country-list .flag-box,
+.intl-tel-input .country-list .country-name {
+  margin-right: 6px;
+}
+
+.intl-tel-input.allow-dropdown input,
+.intl-tel-input.allow-dropdown input[type=text],
+.intl-tel-input.allow-dropdown input[type=tel],
+.intl-tel-input.separate-dial-code input,
+.intl-tel-input.separate-dial-code input[type=text],
+.intl-tel-input.separate-dial-code input[type=tel] {
+  padding-right: 6px;
+  padding-left: 52px;
+  margin-left: 0;
+}
+
+.intl-tel-input.allow-dropdown .flag-container,
+.intl-tel-input.separate-dial-code .flag-container {
+  right: auto;
+  left: 0;
+}
+
+.intl-tel-input.allow-dropdown .flag-container:hover {
+  cursor: pointer;
+}
+
+.intl-tel-input.allow-dropdown .flag-container:hover .selected-flag {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.intl-tel-input.allow-dropdown input[disabled] + .flag-container:hover,
+.intl-tel-input.allow-dropdown input[readonly] + .flag-container:hover {
+  cursor: default;
+}
+
+.intl-tel-input.allow-dropdown input[disabled] + .flag-container:hover .selected-flag,
+.intl-tel-input.allow-dropdown input[readonly] + .flag-container:hover .selected-flag {
+  background-color: transparent;
+}
+
+.intl-tel-input.separate-dial-code .selected-flag {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.intl-tel-input.separate-dial-code .selected-dial-code {
+  margin-left: 6px;
+}
+
+.intl-tel-input.iti-container {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  z-index: 1060;
+  padding: 1px;
+}
+
+.intl-tel-input.iti-container:hover {
+  cursor: pointer;
+}
+
+.iti-mobile .intl-tel-input.iti-container {
+  top: 30px;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  position: fixed;
+}
+
+.iti-mobile .intl-tel-input .country-list {
+  max-height: 100%;
+  width: 100%;
+}
+
+.iti-mobile .intl-tel-input .country-list .country {
+  padding: 10px 10px;
+  line-height: 1.5em;
+}
+
+.iti-flag {
+  width: 20px;
+}
+
+.iti-flag.be {
+  width: 18px;
+}
+
+.iti-flag.ch {
+  width: 15px;
+}
+
+.iti-flag.mc {
+  width: 19px;
+}
+
+.iti-flag.ne {
+  width: 18px;
+}
+
+.iti-flag.np {
+  width: 13px;
+}
+
+.iti-flag.va {
+  width: 15px;
+}
+
+.iti-flag.ac {
+  height: 10px;
+  background-position: 0px 0px;
+}
+
+.iti-flag.ad {
+  height: 14px;
+  background-position: -22px 0px;
+}
+
+.iti-flag.ae {
+  height: 10px;
+  background-position: -44px 0px;
+}
+
+.iti-flag.af {
+  height: 14px;
+  background-position: -66px 0px;
+}
+
+.iti-flag.ag {
+  height: 14px;
+  background-position: -88px 0px;
+}
+
+.iti-flag.ai {
+  height: 10px;
+  background-position: -110px 0px;
+}
+
+.iti-flag.al {
+  height: 15px;
+  background-position: -132px 0px;
+}
+
+.iti-flag.am {
+  height: 10px;
+  background-position: -154px 0px;
+}
+
+.iti-flag.ao {
+  height: 14px;
+  background-position: -176px 0px;
+}
+
+.iti-flag.aq {
+  height: 14px;
+  background-position: -198px 0px;
+}
+
+.iti-flag.ar {
+  height: 13px;
+  background-position: -220px 0px;
+}
+
+.iti-flag.as {
+  height: 10px;
+  background-position: -242px 0px;
+}
+
+.iti-flag.at {
+  height: 14px;
+  background-position: -264px 0px;
+}
+
+.iti-flag.au {
+  height: 10px;
+  background-position: -286px 0px;
+}
+
+.iti-flag.aw {
+  height: 14px;
+  background-position: -308px 0px;
+}
+
+.iti-flag.ax {
+  height: 13px;
+  background-position: -330px 0px;
+}
+
+.iti-flag.az {
+  height: 10px;
+  background-position: -352px 0px;
+}
+
+.iti-flag.ba {
+  height: 10px;
+  background-position: -374px 0px;
+}
+
+.iti-flag.bb {
+  height: 14px;
+  background-position: -396px 0px;
+}
+
+.iti-flag.bd {
+  height: 12px;
+  background-position: -418px 0px;
+}
+
+.iti-flag.be {
+  height: 15px;
+  background-position: -440px 0px;
+}
+
+.iti-flag.bf {
+  height: 14px;
+  background-position: -460px 0px;
+}
+
+.iti-flag.bg {
+  height: 12px;
+  background-position: -482px 0px;
+}
+
+.iti-flag.bh {
+  height: 12px;
+  background-position: -504px 0px;
+}
+
+.iti-flag.bi {
+  height: 12px;
+  background-position: -526px 0px;
+}
+
+.iti-flag.bj {
+  height: 14px;
+  background-position: -548px 0px;
+}
+
+.iti-flag.bl {
+  height: 14px;
+  background-position: -570px 0px;
+}
+
+.iti-flag.bm {
+  height: 10px;
+  background-position: -592px 0px;
+}
+
+.iti-flag.bn {
+  height: 10px;
+  background-position: -614px 0px;
+}
+
+.iti-flag.bo {
+  height: 14px;
+  background-position: -636px 0px;
+}
+
+.iti-flag.bq {
+  height: 14px;
+  background-position: -658px 0px;
+}
+
+.iti-flag.br {
+  height: 14px;
+  background-position: -680px 0px;
+}
+
+.iti-flag.bs {
+  height: 10px;
+  background-position: -702px 0px;
+}
+
+.iti-flag.bt {
+  height: 14px;
+  background-position: -724px 0px;
+}
+
+.iti-flag.bv {
+  height: 15px;
+  background-position: -746px 0px;
+}
+
+.iti-flag.bw {
+  height: 14px;
+  background-position: -768px 0px;
+}
+
+.iti-flag.by {
+  height: 10px;
+  background-position: -790px 0px;
+}
+
+.iti-flag.bz {
+  height: 14px;
+  background-position: -812px 0px;
+}
+
+.iti-flag.ca {
+  height: 10px;
+  background-position: -834px 0px;
+}
+
+.iti-flag.cc {
+  height: 10px;
+  background-position: -856px 0px;
+}
+
+.iti-flag.cd {
+  height: 15px;
+  background-position: -878px 0px;
+}
+
+.iti-flag.cf {
+  height: 14px;
+  background-position: -900px 0px;
+}
+
+.iti-flag.cg {
+  height: 14px;
+  background-position: -922px 0px;
+}
+
+.iti-flag.ch {
+  height: 15px;
+  background-position: -944px 0px;
+}
+
+.iti-flag.ci {
+  height: 14px;
+  background-position: -961px 0px;
+}
+
+.iti-flag.ck {
+  height: 10px;
+  background-position: -983px 0px;
+}
+
+.iti-flag.cl {
+  height: 14px;
+  background-position: -1005px 0px;
+}
+
+.iti-flag.cm {
+  height: 14px;
+  background-position: -1027px 0px;
+}
+
+.iti-flag.cn {
+  height: 14px;
+  background-position: -1049px 0px;
+}
+
+.iti-flag.co {
+  height: 14px;
+  background-position: -1071px 0px;
+}
+
+.iti-flag.cp {
+  height: 14px;
+  background-position: -1093px 0px;
+}
+
+.iti-flag.cr {
+  height: 12px;
+  background-position: -1115px 0px;
+}
+
+.iti-flag.cu {
+  height: 10px;
+  background-position: -1137px 0px;
+}
+
+.iti-flag.cv {
+  height: 12px;
+  background-position: -1159px 0px;
+}
+
+.iti-flag.cw {
+  height: 14px;
+  background-position: -1181px 0px;
+}
+
+.iti-flag.cx {
+  height: 10px;
+  background-position: -1203px 0px;
+}
+
+.iti-flag.cy {
+  height: 14px;
+  background-position: -1225px 0px;
+}
+
+.iti-flag.cz {
+  height: 14px;
+  background-position: -1247px 0px;
+}
+
+.iti-flag.de {
+  height: 12px;
+  background-position: -1269px 0px;
+}
+
+.iti-flag.dg {
+  height: 10px;
+  background-position: -1291px 0px;
+}
+
+.iti-flag.dj {
+  height: 14px;
+  background-position: -1313px 0px;
+}
+
+.iti-flag.dk {
+  height: 15px;
+  background-position: -1335px 0px;
+}
+
+.iti-flag.dm {
+  height: 10px;
+  background-position: -1357px 0px;
+}
+
+.iti-flag.do {
+  height: 14px;
+  background-position: -1379px 0px;
+}
+
+.iti-flag.dz {
+  height: 14px;
+  background-position: -1401px 0px;
+}
+
+.iti-flag.ea {
+  height: 14px;
+  background-position: -1423px 0px;
+}
+
+.iti-flag.ec {
+  height: 14px;
+  background-position: -1445px 0px;
+}
+
+.iti-flag.ee {
+  height: 13px;
+  background-position: -1467px 0px;
+}
+
+.iti-flag.eg {
+  height: 14px;
+  background-position: -1489px 0px;
+}
+
+.iti-flag.eh {
+  height: 10px;
+  background-position: -1511px 0px;
+}
+
+.iti-flag.er {
+  height: 10px;
+  background-position: -1533px 0px;
+}
+
+.iti-flag.es {
+  height: 14px;
+  background-position: -1555px 0px;
+}
+
+.iti-flag.et {
+  height: 10px;
+  background-position: -1577px 0px;
+}
+
+.iti-flag.eu {
+  height: 14px;
+  background-position: -1599px 0px;
+}
+
+.iti-flag.fi {
+  height: 12px;
+  background-position: -1621px 0px;
+}
+
+.iti-flag.fj {
+  height: 10px;
+  background-position: -1643px 0px;
+}
+
+.iti-flag.fk {
+  height: 10px;
+  background-position: -1665px 0px;
+}
+
+.iti-flag.fm {
+  height: 11px;
+  background-position: -1687px 0px;
+}
+
+.iti-flag.fo {
+  height: 15px;
+  background-position: -1709px 0px;
+}
+
+.iti-flag.fr {
+  height: 14px;
+  background-position: -1731px 0px;
+}
+
+.iti-flag.ga {
+  height: 15px;
+  background-position: -1753px 0px;
+}
+
+.iti-flag.gb {
+  height: 10px;
+  background-position: -1775px 0px;
+}
+
+.iti-flag.gd {
+  height: 12px;
+  background-position: -1797px 0px;
+}
+
+.iti-flag.ge {
+  height: 14px;
+  background-position: -1819px 0px;
+}
+
+.iti-flag.gf {
+  height: 14px;
+  background-position: -1841px 0px;
+}
+
+.iti-flag.gg {
+  height: 14px;
+  background-position: -1863px 0px;
+}
+
+.iti-flag.gh {
+  height: 14px;
+  background-position: -1885px 0px;
+}
+
+.iti-flag.gi {
+  height: 10px;
+  background-position: -1907px 0px;
+}
+
+.iti-flag.gl {
+  height: 14px;
+  background-position: -1929px 0px;
+}
+
+.iti-flag.gm {
+  height: 14px;
+  background-position: -1951px 0px;
+}
+
+.iti-flag.gn {
+  height: 14px;
+  background-position: -1973px 0px;
+}
+
+.iti-flag.gp {
+  height: 14px;
+  background-position: -1995px 0px;
+}
+
+.iti-flag.gq {
+  height: 14px;
+  background-position: -2017px 0px;
+}
+
+.iti-flag.gr {
+  height: 14px;
+  background-position: -2039px 0px;
+}
+
+.iti-flag.gs {
+  height: 10px;
+  background-position: -2061px 0px;
+}
+
+.iti-flag.gt {
+  height: 13px;
+  background-position: -2083px 0px;
+}
+
+.iti-flag.gu {
+  height: 11px;
+  background-position: -2105px 0px;
+}
+
+.iti-flag.gw {
+  height: 10px;
+  background-position: -2127px 0px;
+}
+
+.iti-flag.gy {
+  height: 12px;
+  background-position: -2149px 0px;
+}
+
+.iti-flag.hk {
+  height: 14px;
+  background-position: -2171px 0px;
+}
+
+.iti-flag.hm {
+  height: 10px;
+  background-position: -2193px 0px;
+}
+
+.iti-flag.hn {
+  height: 10px;
+  background-position: -2215px 0px;
+}
+
+.iti-flag.hr {
+  height: 10px;
+  background-position: -2237px 0px;
+}
+
+.iti-flag.ht {
+  height: 12px;
+  background-position: -2259px 0px;
+}
+
+.iti-flag.hu {
+  height: 10px;
+  background-position: -2281px 0px;
+}
+
+.iti-flag.ic {
+  height: 14px;
+  background-position: -2303px 0px;
+}
+
+.iti-flag.id {
+  height: 14px;
+  background-position: -2325px 0px;
+}
+
+.iti-flag.ie {
+  height: 10px;
+  background-position: -2347px 0px;
+}
+
+.iti-flag.il {
+  height: 15px;
+  background-position: -2369px 0px;
+}
+
+.iti-flag.im {
+  height: 10px;
+  background-position: -2391px 0px;
+}
+
+.iti-flag.in {
+  height: 14px;
+  background-position: -2413px 0px;
+}
+
+.iti-flag.io {
+  height: 10px;
+  background-position: -2435px 0px;
+}
+
+.iti-flag.iq {
+  height: 14px;
+  background-position: -2457px 0px;
+}
+
+.iti-flag.ir {
+  height: 12px;
+  background-position: -2479px 0px;
+}
+
+.iti-flag.is {
+  height: 15px;
+  background-position: -2501px 0px;
+}
+
+.iti-flag.it {
+  height: 14px;
+  background-position: -2523px 0px;
+}
+
+.iti-flag.je {
+  height: 12px;
+  background-position: -2545px 0px;
+}
+
+.iti-flag.jm {
+  height: 10px;
+  background-position: -2567px 0px;
+}
+
+.iti-flag.jo {
+  height: 10px;
+  background-position: -2589px 0px;
+}
+
+.iti-flag.jp {
+  height: 14px;
+  background-position: -2611px 0px;
+}
+
+.iti-flag.ke {
+  height: 14px;
+  background-position: -2633px 0px;
+}
+
+.iti-flag.kg {
+  height: 12px;
+  background-position: -2655px 0px;
+}
+
+.iti-flag.kh {
+  height: 13px;
+  background-position: -2677px 0px;
+}
+
+.iti-flag.ki {
+  height: 10px;
+  background-position: -2699px 0px;
+}
+
+.iti-flag.km {
+  height: 12px;
+  background-position: -2721px 0px;
+}
+
+.iti-flag.kn {
+  height: 14px;
+  background-position: -2743px 0px;
+}
+
+.iti-flag.kp {
+  height: 10px;
+  background-position: -2765px 0px;
+}
+
+.iti-flag.kr {
+  height: 14px;
+  background-position: -2787px 0px;
+}
+
+.iti-flag.kw {
+  height: 10px;
+  background-position: -2809px 0px;
+}
+
+.iti-flag.ky {
+  height: 10px;
+  background-position: -2831px 0px;
+}
+
+.iti-flag.kz {
+  height: 10px;
+  background-position: -2853px 0px;
+}
+
+.iti-flag.la {
+  height: 14px;
+  background-position: -2875px 0px;
+}
+
+.iti-flag.lb {
+  height: 14px;
+  background-position: -2897px 0px;
+}
+
+.iti-flag.lc {
+  height: 10px;
+  background-position: -2919px 0px;
+}
+
+.iti-flag.li {
+  height: 12px;
+  background-position: -2941px 0px;
+}
+
+.iti-flag.lk {
+  height: 10px;
+  background-position: -2963px 0px;
+}
+
+.iti-flag.lr {
+  height: 11px;
+  background-position: -2985px 0px;
+}
+
+.iti-flag.ls {
+  height: 14px;
+  background-position: -3007px 0px;
+}
+
+.iti-flag.lt {
+  height: 12px;
+  background-position: -3029px 0px;
+}
+
+.iti-flag.lu {
+  height: 12px;
+  background-position: -3051px 0px;
+}
+
+.iti-flag.lv {
+  height: 10px;
+  background-position: -3073px 0px;
+}
+
+.iti-flag.ly {
+  height: 10px;
+  background-position: -3095px 0px;
+}
+
+.iti-flag.ma {
+  height: 14px;
+  background-position: -3117px 0px;
+}
+
+.iti-flag.mc {
+  height: 15px;
+  background-position: -3139px 0px;
+}
+
+.iti-flag.md {
+  height: 10px;
+  background-position: -3160px 0px;
+}
+
+.iti-flag.me {
+  height: 10px;
+  background-position: -3182px 0px;
+}
+
+.iti-flag.mf {
+  height: 14px;
+  background-position: -3204px 0px;
+}
+
+.iti-flag.mg {
+  height: 14px;
+  background-position: -3226px 0px;
+}
+
+.iti-flag.mh {
+  height: 11px;
+  background-position: -3248px 0px;
+}
+
+.iti-flag.mk {
+  height: 10px;
+  background-position: -3270px 0px;
+}
+
+.iti-flag.ml {
+  height: 14px;
+  background-position: -3292px 0px;
+}
+
+.iti-flag.mm {
+  height: 14px;
+  background-position: -3314px 0px;
+}
+
+.iti-flag.mn {
+  height: 10px;
+  background-position: -3336px 0px;
+}
+
+.iti-flag.mo {
+  height: 14px;
+  background-position: -3358px 0px;
+}
+
+.iti-flag.mp {
+  height: 10px;
+  background-position: -3380px 0px;
+}
+
+.iti-flag.mq {
+  height: 14px;
+  background-position: -3402px 0px;
+}
+
+.iti-flag.mr {
+  height: 14px;
+  background-position: -3424px 0px;
+}
+
+.iti-flag.ms {
+  height: 10px;
+  background-position: -3446px 0px;
+}
+
+.iti-flag.mt {
+  height: 14px;
+  background-position: -3468px 0px;
+}
+
+.iti-flag.mu {
+  height: 14px;
+  background-position: -3490px 0px;
+}
+
+.iti-flag.mv {
+  height: 14px;
+  background-position: -3512px 0px;
+}
+
+.iti-flag.mw {
+  height: 14px;
+  background-position: -3534px 0px;
+}
+
+.iti-flag.mx {
+  height: 12px;
+  background-position: -3556px 0px;
+}
+
+.iti-flag.my {
+  height: 10px;
+  background-position: -3578px 0px;
+}
+
+.iti-flag.mz {
+  height: 14px;
+  background-position: -3600px 0px;
+}
+
+.iti-flag.na {
+  height: 14px;
+  background-position: -3622px 0px;
+}
+
+.iti-flag.nc {
+  height: 10px;
+  background-position: -3644px 0px;
+}
+
+.iti-flag.ne {
+  height: 15px;
+  background-position: -3666px 0px;
+}
+
+.iti-flag.nf {
+  height: 10px;
+  background-position: -3686px 0px;
+}
+
+.iti-flag.ng {
+  height: 10px;
+  background-position: -3708px 0px;
+}
+
+.iti-flag.ni {
+  height: 12px;
+  background-position: -3730px 0px;
+}
+
+.iti-flag.nl {
+  height: 14px;
+  background-position: -3752px 0px;
+}
+
+.iti-flag.no {
+  height: 15px;
+  background-position: -3774px 0px;
+}
+
+.iti-flag.np {
+  height: 15px;
+  background-position: -3796px 0px;
+}
+
+.iti-flag.nr {
+  height: 10px;
+  background-position: -3811px 0px;
+}
+
+.iti-flag.nu {
+  height: 10px;
+  background-position: -3833px 0px;
+}
+
+.iti-flag.nz {
+  height: 10px;
+  background-position: -3855px 0px;
+}
+
+.iti-flag.om {
+  height: 10px;
+  background-position: -3877px 0px;
+}
+
+.iti-flag.pa {
+  height: 14px;
+  background-position: -3899px 0px;
+}
+
+.iti-flag.pe {
+  height: 14px;
+  background-position: -3921px 0px;
+}
+
+.iti-flag.pf {
+  height: 14px;
+  background-position: -3943px 0px;
+}
+
+.iti-flag.pg {
+  height: 15px;
+  background-position: -3965px 0px;
+}
+
+.iti-flag.ph {
+  height: 10px;
+  background-position: -3987px 0px;
+}
+
+.iti-flag.pk {
+  height: 14px;
+  background-position: -4009px 0px;
+}
+
+.iti-flag.pl {
+  height: 13px;
+  background-position: -4031px 0px;
+}
+
+.iti-flag.pm {
+  height: 14px;
+  background-position: -4053px 0px;
+}
+
+.iti-flag.pn {
+  height: 10px;
+  background-position: -4075px 0px;
+}
+
+.iti-flag.pr {
+  height: 14px;
+  background-position: -4097px 0px;
+}
+
+.iti-flag.ps {
+  height: 10px;
+  background-position: -4119px 0px;
+}
+
+.iti-flag.pt {
+  height: 14px;
+  background-position: -4141px 0px;
+}
+
+.iti-flag.pw {
+  height: 13px;
+  background-position: -4163px 0px;
+}
+
+.iti-flag.py {
+  height: 11px;
+  background-position: -4185px 0px;
+}
+
+.iti-flag.qa {
+  height: 8px;
+  background-position: -4207px 0px;
+}
+
+.iti-flag.re {
+  height: 14px;
+  background-position: -4229px 0px;
+}
+
+.iti-flag.ro {
+  height: 14px;
+  background-position: -4251px 0px;
+}
+
+.iti-flag.rs {
+  height: 14px;
+  background-position: -4273px 0px;
+}
+
+.iti-flag.ru {
+  height: 14px;
+  background-position: -4295px 0px;
+}
+
+.iti-flag.rw {
+  height: 14px;
+  background-position: -4317px 0px;
+}
+
+.iti-flag.sa {
+  height: 14px;
+  background-position: -4339px 0px;
+}
+
+.iti-flag.sb {
+  height: 10px;
+  background-position: -4361px 0px;
+}
+
+.iti-flag.sc {
+  height: 10px;
+  background-position: -4383px 0px;
+}
+
+.iti-flag.sd {
+  height: 10px;
+  background-position: -4405px 0px;
+}
+
+.iti-flag.se {
+  height: 13px;
+  background-position: -4427px 0px;
+}
+
+.iti-flag.sg {
+  height: 14px;
+  background-position: -4449px 0px;
+}
+
+.iti-flag.sh {
+  height: 10px;
+  background-position: -4471px 0px;
+}
+
+.iti-flag.si {
+  height: 10px;
+  background-position: -4493px 0px;
+}
+
+.iti-flag.sj {
+  height: 15px;
+  background-position: -4515px 0px;
+}
+
+.iti-flag.sk {
+  height: 14px;
+  background-position: -4537px 0px;
+}
+
+.iti-flag.sl {
+  height: 14px;
+  background-position: -4559px 0px;
+}
+
+.iti-flag.sm {
+  height: 15px;
+  background-position: -4581px 0px;
+}
+
+.iti-flag.sn {
+  height: 14px;
+  background-position: -4603px 0px;
+}
+
+.iti-flag.so {
+  height: 14px;
+  background-position: -4625px 0px;
+}
+
+.iti-flag.sr {
+  height: 14px;
+  background-position: -4647px 0px;
+}
+
+.iti-flag.ss {
+  height: 10px;
+  background-position: -4669px 0px;
+}
+
+.iti-flag.st {
+  height: 10px;
+  background-position: -4691px 0px;
+}
+
+.iti-flag.sv {
+  height: 12px;
+  background-position: -4713px 0px;
+}
+
+.iti-flag.sx {
+  height: 14px;
+  background-position: -4735px 0px;
+}
+
+.iti-flag.sy {
+  height: 14px;
+  background-position: -4757px 0px;
+}
+
+.iti-flag.sz {
+  height: 14px;
+  background-position: -4779px 0px;
+}
+
+.iti-flag.ta {
+  height: 10px;
+  background-position: -4801px 0px;
+}
+
+.iti-flag.tc {
+  height: 10px;
+  background-position: -4823px 0px;
+}
+
+.iti-flag.td {
+  height: 14px;
+  background-position: -4845px 0px;
+}
+
+.iti-flag.tf {
+  height: 14px;
+  background-position: -4867px 0px;
+}
+
+.iti-flag.tg {
+  height: 13px;
+  background-position: -4889px 0px;
+}
+
+.iti-flag.th {
+  height: 14px;
+  background-position: -4911px 0px;
+}
+
+.iti-flag.tj {
+  height: 10px;
+  background-position: -4933px 0px;
+}
+
+.iti-flag.tk {
+  height: 10px;
+  background-position: -4955px 0px;
+}
+
+.iti-flag.tl {
+  height: 10px;
+  background-position: -4977px 0px;
+}
+
+.iti-flag.tm {
+  height: 14px;
+  background-position: -4999px 0px;
+}
+
+.iti-flag.tn {
+  height: 14px;
+  background-position: -5021px 0px;
+}
+
+.iti-flag.to {
+  height: 10px;
+  background-position: -5043px 0px;
+}
+
+.iti-flag.tr {
+  height: 14px;
+  background-position: -5065px 0px;
+}
+
+.iti-flag.tt {
+  height: 12px;
+  background-position: -5087px 0px;
+}
+
+.iti-flag.tv {
+  height: 10px;
+  background-position: -5109px 0px;
+}
+
+.iti-flag.tw {
+  height: 14px;
+  background-position: -5131px 0px;
+}
+
+.iti-flag.tz {
+  height: 14px;
+  background-position: -5153px 0px;
+}
+
+.iti-flag.ua {
+  height: 14px;
+  background-position: -5175px 0px;
+}
+
+.iti-flag.ug {
+  height: 14px;
+  background-position: -5197px 0px;
+}
+
+.iti-flag.um {
+  height: 11px;
+  background-position: -5219px 0px;
+}
+
+.iti-flag.un {
+  height: 14px;
+  background-position: -5241px 0px;
+}
+
+.iti-flag.us {
+  height: 11px;
+  background-position: -5263px 0px;
+}
+
+.iti-flag.uy {
+  height: 14px;
+  background-position: -5285px 0px;
+}
+
+.iti-flag.uz {
+  height: 10px;
+  background-position: -5307px 0px;
+}
+
+.iti-flag.va {
+  height: 15px;
+  background-position: -5329px 0px;
+}
+
+.iti-flag.vc {
+  height: 14px;
+  background-position: -5346px 0px;
+}
+
+.iti-flag.ve {
+  height: 14px;
+  background-position: -5368px 0px;
+}
+
+.iti-flag.vg {
+  height: 10px;
+  background-position: -5390px 0px;
+}
+
+.iti-flag.vi {
+  height: 14px;
+  background-position: -5412px 0px;
+}
+
+.iti-flag.vn {
+  height: 14px;
+  background-position: -5434px 0px;
+}
+
+.iti-flag.vu {
+  height: 12px;
+  background-position: -5456px 0px;
+}
+
+.iti-flag.wf {
+  height: 14px;
+  background-position: -5478px 0px;
+}
+
+.iti-flag.ws {
+  height: 10px;
+  background-position: -5500px 0px;
+}
+
+.iti-flag.xk {
+  height: 15px;
+  background-position: -5522px 0px;
+}
+
+.iti-flag.ye {
+  height: 14px;
+  background-position: -5544px 0px;
+}
+
+.iti-flag.yt {
+  height: 14px;
+  background-position: -5566px 0px;
+}
+
+.iti-flag.za {
+  height: 14px;
+  background-position: -5588px 0px;
+}
+
+.iti-flag.zm {
+  height: 14px;
+  background-position: -5610px 0px;
+}
+
+.iti-flag.zw {
+  height: 10px;
+  background-position: -5632px 0px;
+}
+
+.iti-flag {
+  height: 15px;
+  box-shadow: 0px 0px 1px 0px #888;
+  background-image: url("../images/flags.png");
+  background-repeat: no-repeat;
+  background-color: #DBDBDB;
+  background-position: 20px 0;
+}
+
+
+.iti-flag.np {
+  background-color: transparent;
+}
+
+input:focus {
+  border: 1px solid #2fc738 !important;
 }
