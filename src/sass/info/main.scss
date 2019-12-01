@@ -585,6 +585,10 @@ z-index: 6;
   transition: .3s;
   border: 0;
   cursor: pointer;
+  &.disable {
+    background: #fda830;
+    box-shadow: 0 0;
+  }
 
   .icon {
     font-size: 18px;
@@ -1448,6 +1452,11 @@ position: relative;
     line-height: 1.25;
     max-width: 275px;
     margin-bottom: 0;
+  }
+  .img {
+    img {
+      max-width: 150px;
+    }
   }
 }
 
@@ -3688,7 +3697,7 @@ position: relative;
   }
 }
 
-#security {
+.security {
   max-width: 500px;
   width: 100%;
 
@@ -4544,4 +4553,11 @@ font-family: "SF Pro Display";
 font-size: 12px;
 font-weight: 500;
 line-height: 15px;
+}
+
+.security-img {
+  text-align: center;
+  img {
+    max-width: 150px;
+  }
 }

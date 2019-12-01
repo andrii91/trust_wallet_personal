@@ -278,6 +278,7 @@
                   <div class="col-xl-9">
                     <div class="security-item">
                    <a class="security-show" data-popup href="#security"></a>
+                   <a class="security-show_security_no" data-popup href="#security_no"></a>
                       <ul class="calc-radio">
                     <li data-percent="" data-click="show"></li>
                     <li  class="active" data-percent=""></li>
@@ -311,12 +312,7 @@
       <p>Copyright © 2019 All rights reserved</p>
     </div>
   </footer>
-  <ul>
-    <li>тест попап</li>
-    <li><a data-popup href="#transaction">transaction</a></li>
-    <li><a data-popup href="#confirmation">confirmation</a></li>
-    <li><a data-popup href="#invest">Активные инвестиционные пакеты</a></li>
-  </ul>
+
 
   <div class='menu menu-fixed'>
     <input class='menu-toggler' id='menu-toggler' type='checkbox'>
@@ -337,7 +333,7 @@
 
   <a href="#" class="chat-btn"><span class="icon-chat"></span></a>
   
-  <div id="security" class="modal mfp-hide white-popup-block">
+  <div id="security" class="modal mfp-hide white-popup-block security">
         <div class="pay-item">
         <div class="title">Подключение двухфакторной аутентификации</div>
         <div class="row align-items-center">
@@ -353,6 +349,25 @@
           </div>
         </div>
             <button class="button">Сохранить</button>
+    </div>
+  </div>
+  
+  <div id="security_no" class="modal mfp-hide white-popup-block xs-center security">
+        <div class="pay-item">
+        <div class="title">Отключение двухфакторной аутентификации</div>
+        <div class="row align-items-center">
+          <div class="col-xl-4">
+            <div class="img"><img src="images/234er.jpg" alt=""></div>
+          </div>
+          <div class="col-xl-8">
+            <div class="security-code">T32EH4GQIT56GE5QJ62NXNFGWA3MG533</div>
+            <div class="security-input">
+              <span>Код 2FA</span>
+              <input type="text">
+            </div>
+          </div>
+        </div>
+            <button class="button disable">Отключить</button>
     </div>
   </div>
 

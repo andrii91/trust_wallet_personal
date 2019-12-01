@@ -369,8 +369,10 @@ $(document).ready(function () {
       $('.calc-percent .num').text($(this).data('percent') + '%');
     }
     if ($('.calc-radio li.active').hasClass('active') && $('.calc-radio li.active').data('click') == 'show') {
-      console.log('1');
       $('.security-show').trigger('click');
+    }else{
+      $('.security-show_security_no').trigger('click');
+      
     }
 
     usd_calc();
