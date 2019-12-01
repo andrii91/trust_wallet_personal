@@ -543,16 +543,16 @@ $(document).ready(function () {
     }
   })
 
-  $('.block-icon').click(function () {
+  $('.block-icon .team-td:nth-child(1)').click(function () {
 
-    if ($(this).hasClass('show-next')) {
-      $(this).removeClass('show-next');
-      $(this).next().css('display', 'none');
-/*      $(this).nextAll().removeClass('show-next');
-      $(this).nextAll().css('display', 'none');*/
+    if ($(this).parents('.block-icon').hasClass('show-next')) {
+      $(this).parents('.block-icon').removeClass('show-next');
+      $(this).parents('.block-icon').next().css('display', 'none');
+/*      $(this).parents('.block-icon').nextAll().removeClass('show-next');
+      $(this).parents('.block-icon').nextAll().css('display', 'none');*/
     } else {
-      $(this).addClass('show-next');
-      $(this).next().css('display', 'flex');
+      $(this).parents('.block-icon').addClass('show-next');
+      $(this).parents('.block-icon').next().css('display', 'flex');
 
     }
 
@@ -749,4 +749,58 @@ $(document).ready(function () {
     $('.validation').addClass($('.has-error').length ? 'text-danger' : 'text-success');
   });*/
 
+  
+  
+  
+  function timer() {
+
+
+    var end = new Date(2019, 11, 7, 00, 00, 00, 00);
+
+    var _milisec = 10;
+    var _second = _milisec * 100;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+
+    function showRemaining() {
+      var now = new Date();
+      var distance = end - now + 480000;
+
+      if (distance < 0) {
+
+        $('.days').text("00");
+        $('.hours').text("00");
+        $('.minutes').text("00");
+        $('.seconds').text("00");
+//        $('.milliseconds').text("00");
+
+        clearInterval(intervalTimer);
+        return;
+      }
+
+      var days = Math.floor(distance / _day);
+      var hours = Math.floor((distance % _day) / _hour);
+      var minutes = Math.floor((distance % _hour) / _minute);
+      var seconds = Math.floor((distance % _minute) / _second);
+      var miliseconds = Math.floor((distance % _second) / _milisec);
+
+      if (seconds < 10) seconds = '0' + seconds;
+      if (minutes < 10) minutes = '0' + minutes;
+      if (hours < 10) hours = '0' + hours;
+      if (days < 10) days = '0' + days;
+
+      $('.days').text(days);
+      $('.hours').text(hours);
+      $('.minutes').text(minutes);
+      $('.seconds').text(seconds);
+//      $('.milliseconds').text(miliseconds);
+
+
+    };
+
+    var intervalTimer = setInterval(showRemaining, 10);
+  }
+  timer();
+  
 });

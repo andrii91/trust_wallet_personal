@@ -2543,6 +2543,7 @@ table.dataTable {
       font-weight: 700;
       line-height: 1.5;
       padding-left: 35px;
+      cursor: pointer;
     }
 
   }
@@ -2608,7 +2609,7 @@ table.dataTable {
   }
 
   &.block-icon {
-    cursor: pointer;
+//    cursor: pointer;
 
     + .block-icon {
       display: none;
@@ -2702,7 +2703,8 @@ table.dataTable {
 
 .icon-item {
   margin-left: 10px;
-
+position: relative;
+    z-index: auto;
   &:hover {
     .icon {
       color: #34d341;
@@ -4481,7 +4483,10 @@ line-height: 1;
 font-weight: 700;
 text-transform: uppercase;
 margin-bottom: 0;
-
+    span {
+      display: inline-block;
+      min-width: 25px;
+    }
   }
   p {
         span {
