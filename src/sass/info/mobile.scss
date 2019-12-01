@@ -412,7 +412,12 @@
 
   .ranks-table td a {
     margin-right: 0;
-    display: block;
+    display: inline-block;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   #chartContainer {
@@ -467,19 +472,23 @@
   .stock-order .exchange-form .label.large .input-all {
     width: calc(100% - 127px);
   }
+
   #DataTables_Table_4_wrapper {
     margin-bottom: 30px;
   }
-  
-  .settings-form .col-left, .settings-form .col-right {
-        -ms-flex: 0 0 100%;
+
+  .settings-form .col-left,
+  .settings-form .col-right {
+    -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
   }
+
   .verification .label .btn {
     padding: 12px 12px;
     width: 82px;
-}
+  }
+
   .verification .label .input {
     vertical-align: middle;
     border: 0;
@@ -492,111 +501,213 @@
     font-size: 11px;
     font-weight: 500;
     line-height: 1;
-}
+  }
+
   .verification .label .icon {
     color: #ef204c;
     font-size: 15px;
     vertical-align: middle;
     margin-right: 0;
-}
+  }
+
   .verification.success .label .input {
     width: 100%;
     line-height: 1.4;
   }
+
   .logo {
     display: block;
     text-align: center;
     margin-bottom: 20px;
   }
+
   .text-right {
     text-align: center;
   }
+
   .property-title {
     position: static;
   }
-  
+
   .ladder_ranks-table table.left {
     margin-top: 52px;
     border-radius: 3px;
     width: 132px;
-}
+  }
+
   .ladder_ranks-table table.left tr td {
     font-size: 10px;
-}
-  
+  }
+
   #scroll-tbl {
-       display: block;
+    display: block;
     overflow-x: auto;
     white-space: nowrap;
-       width: 42vw;
+    width: 42vw;
   }
+
   main {
     overflow-x: hidden;
   }
+
   .ladder_ranks-title {
     text-align: center;
   }
+
   .ladder_ranks-img {
     text-align: center;
   }
+
   #reportgraf {
     max-height: 205px;
   }
+
   .report-table .header-title {
     position: static;
     margin-bottom: 20px;
   }
+
   .dataTables_wrapper label {
     margin-left: 0;
   }
+
   #DataTables_Table_0_length {
     float: left;
+
     label {
-    margin-bottom: 0;
-      
+      margin-bottom: 0;
+
     }
   }
+
   .dataTables_wrapper .dataTables_filter {
     margin-top: 0;
   }
-  table.dataTable.dtr-inline.collapsed>tbody>tr[role=row]>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role=row]>th:first-child:before {
+
+  table.dataTable.dtr-inline.collapsed > tbody > tr[role=row] > td:first-child:before,
+  table.dataTable.dtr-inline.collapsed > tbody > tr[role=row] > th:first-child:before {
     top: 9px;
     left: 4px;
     height: 14px;
     width: 14px;
     display: block;
     position: absolute;
-   color: #000; 
-   border: 0px solid #fff; 
-   border-radius: 0; 
-   box-shadow: 0 0 ; 
+    color: #000;
+    border: 0px solid #fff;
+    border-radius: 0;
+    box-shadow: 0 0;
     box-sizing: content-box;
     text-align: center;
-    text-indent: 0!important;
-    font-family: 'Courier New',Courier,monospace;
+    text-indent: 0 !important;
+    font-family: 'Courier New', Courier, monospace;
     line-height: 1;
-   background-color: transparent; 
+    background-color: transparent;
     position: absolute;
     top: 50%;
     transform: translateY(-35%);
-}
-.report-select select {
+  }
+
+  .report-select select {
     background-position: 90% center;
   }
+
   .profile {
     float: left;
-    
+
   }
+
   .bonus {
     float: right;
   }
+
   .menu-top {
     padding: 18px 0;
   }
+
   .dataTables_wrapper .dataTables_paginate {
     margin-top: 0;
   }
+
   .rang-btn {
     display: block;
+  }
+
+  .exchange table td {
+    padding: 8px 18px !important;
+  }
+
+  .withdrawal table th {
+    text-align: center;
+  }
+
+  &.btc-template .reinvest:before {
+    background: url(../images/graph2.svg) no-repeat center bottom;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .reinvest:before {
+    background: url(../images/graph.svg) no-repeat center bottom;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  table.dataTable thead .sorting {
+    text-align: center;
+  }
+
+  .ranks-table td:first-child,
+  .ranks-table th:first-child {
+    padding: 10px !important;
+  }
+
+  .report-table table {
+    thead {
+      tr {
+        th {
+          &:nth-child(3) {
+            padding: 7px 38px;
+          }
+        }
+      }
+    }
+  }
+
+  .settings-tab li {
+    text-align: left;
+    max-width: 132px;
+    margin-bottom: 10px;
+
+    a {
+      font-size: 10px;
+    }
+  }
+  .security-item .calc-radio {
+    margin-left: auto;
+    margin-right: auto;
+}
+  .security-item {
+    margin-top: 0;
+  }
+  .form-title {
+    margin-bottom: 10px;
+  }
+  .exchange-summ {
+    margin-top: 20px;
+  }
+  .team .title {
+    margin-top: 34px;
   }
 }

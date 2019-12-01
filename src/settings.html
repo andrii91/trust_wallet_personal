@@ -146,19 +146,19 @@
                   <div class="col-left">
                     <div class="form-title">Кошелек BTC</div>
                   </div>
-                  <div class="col-right"><input type="text" name=""></div>
+                  <div class="col-right"><input type="text" name="" required></div>
                 </div>
-                <div class="row align-items-center">
+                <div class="row align-items-center form-group">
                   <div class="col-left">
-                    <div class="form-title">Visa/MasterCard</div>
+                    <div class="form-title">Visa/MasterCard </div>
                   </div>
-                  <div class="col-right"><input type="text" name="" class="ua-card"></div>
+                  <div class="col-right"><input type="text" name="" class="ua-card cc-number form-control" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" required></div>
                 </div>
-                <div class="row align-items-center">
+                <div class="row align-items-center form-group">
                   <div class="col-left">
-                    <div class="form-title">Visa/MasterCard</div>
+                    <div class="form-title">Visa/MasterCard </div>
                   </div>
-                  <div class="col-right"><input type="text" name="" class="ru-card"></div>
+                  <div class="col-right"><input type="text" name="" class="ru-card cc-number form-control" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" required></div>
                 </div>
                 <button type="submit">Сохранить</button>
               </form>
@@ -277,8 +277,9 @@
                   </div>
                   <div class="col-xl-9">
                     <div class="security-item">
+                   <a class="security-show" data-popup href="#security"></a>
                       <ul class="calc-radio">
-                    <li data-percent="" data-popup href="#security"></li>
+                    <li data-percent="" data-click="show"></li>
                     <li  class="active" data-percent=""></li>
                   </ul>
                     </div>
@@ -750,7 +751,7 @@
           <option value="Украина">Украина</option>
         </select>
         <label for="fp1">
-          <input id="fp1" type="text" value="100 usd">USD
+          <input id="fp1" type="number" value="100">USD
         </label>
         <span>=</span>
         <label for="fp2" class="disabled">
@@ -767,7 +768,7 @@
           <option value="Украина">Украина</option>
         </select>
         <label for="fp1-1">
-          <input id="fp1-1" type="text" value="100 usd">USD
+          <input id="fp1-1" type="number" value="100">USD
         </label>
         <span>=</span>
         <label for="fp2-1" class="disabled">

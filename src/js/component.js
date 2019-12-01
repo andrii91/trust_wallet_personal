@@ -357,17 +357,40 @@ $(document).ready(function () {
   })
 
   $('.calc-radio li').click(function () {
-    $('.calc-radio li').removeClass('active');
-    $(this).addClass('active');
-    $('#calculator_input_usd').data('percent', $(this).data('percent'));
-    $('.calc-percent .num').text($(this).data('percent') + '%');
+    if ($(this).hasClass('active')) {
+      $('.calc-radio li').addClass('active');
+      $(this).removeClass('active');
+      $('#calculator_input_usd').data('percent', $('.calc-radio li.active').data('percent'));
+      $('.calc-percent .num').text($('.calc-radio li.active').data('percent') + '%');
+    } else {
+      $('.calc-radio li').removeClass('active');
+      $(this).addClass('active');
+      $('#calculator_input_usd').data('percent', $(this).data('percent'));
+      $('.calc-percent .num').text($(this).data('percent') + '%');
+    }
+    if ($('.calc-radio li.active').hasClass('active') && $('.calc-radio li.active').data('click') == 'show') {
+      console.log('1');
+      $('.security-show').trigger('click');
+    }
+
     usd_calc();
   })
 
   $('[data-popup]').magnificPopup({
     type: 'inline',
-    preloader: false
+    preloader: false,
+    callbacks: {
+      close: function () {
+        $('body').removeClass('m-hidden');
+
+      }
+    }
   });
+
+  $('[data-popup]').click(function () {
+    $('body').addClass('m-hidden');
+  })
+
 
   $('.tab-currency a').click(function (e) {
     e.preventDefault();
@@ -525,8 +548,8 @@ $(document).ready(function () {
     if ($(this).hasClass('show-next')) {
       $(this).removeClass('show-next');
       $(this).next().css('display', 'none');
-      $(this).nextAll().removeClass('show-next');
-      $(this).nextAll().css('display', 'none');
+/*      $(this).nextAll().removeClass('show-next');
+      $(this).nextAll().css('display', 'none');*/
     } else {
       $(this).addClass('show-next');
       $(this).next().css('display', 'flex');
@@ -694,13 +717,36 @@ $(document).ready(function () {
   $('.menu-fixed').addClass('m-close');
 
 
-  $('.transfer-form select[name="type"]').change(function(){
-    if($(this).val() == '2') {
+  $('.transfer-form select[name="type"]').change(function () {
+    if ($(this).val() == '2') {
       $('.card-plus').show();
-    }else{
+    } else {
       $('.card-plus').hide();
-      
+
     }
   })
+
+
+
+  //  https://stripe.dev/jquery.payment/example/
+
+//  $('[data-numeric]').payment('restrictNumeric');
+  $('.cc-number').payment('formatCardNumber');
+//  $('.cc-exp').payment('formatCardExpiry');
+//  $('.cc-cvc').payment('formatCardCVC');
+/*  $.fn.toggleInputError = function (erred) {
+    this.parent('.form-group').toggleClass('has-error', erred);
+    return this;
+  };
+  $('form').submit(function (e) {
+    e.preventDefault();
+    var cardType = $.payment.cardType($('.cc-number').val());
+    $('.cc-number').toggleInputError(!$.payment.validateCardNumber($('.cc-number').val()));
+    $('.cc-exp').toggleInputError(!$.payment.validateCardExpiry($('.cc-exp').payment('cardExpiryVal')));
+    $('.cc-cvc').toggleInputError(!$.payment.validateCardCVC($('.cc-cvc').val(), cardType));
+    $('.cc-brand').text(cardType);
+    $('.validation').removeClass('text-danger text-success');
+    $('.validation').addClass($('.has-error').length ? 'text-danger' : 'text-success');
+  });*/
 
 });

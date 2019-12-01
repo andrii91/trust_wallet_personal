@@ -144,7 +144,7 @@
                 <li>посуточная аренда $700-800/мес</li>
               </ul>
               <p>Через год инвестиция $19500 возвращается на баланс и доступна к выводу.</p>
-              <a href="#" class="button order-btn">Купить 19 500  USD         </a>
+              <a data-popup href="#pay_build" class="button order-btn">Купить 19 500  USD         </a>
             </div>
           </div>
           <div class="col-xl-6">
@@ -170,7 +170,7 @@
                 <li>посуточная аренда $700-800/мес</li>
               </ul>
               <p>Через год инвестиция $19500 возвращается на баланс и доступна к выводу.</p>
-              <a href="#" class="button order-btn">Купить 19 500  USD         </a>
+              <a data-popup href="#pay_build" class="button order-btn">Купить 19 500  USD         </a>
             </div>
           </div>
           <div class="col-xl-6">
@@ -196,7 +196,7 @@
                 <li>посуточная аренда $700-800/мес</li>
               </ul>
               <p>Через год инвестиция $19500 возвращается на баланс и доступна к выводу.</p>
-              <a href="#" class="button order-btn">Купить 19 500  USD         </a>
+              <a data-popup href="#pay_build" class="button order-btn">Купить 19 500  USD         </a>
             </div>
           </div>
           <div class="col-xl-6">
@@ -222,7 +222,7 @@
                 <li>посуточная аренда $700-800/мес</li>
               </ul>
               <p>Через год инвестиция $19500 возвращается на баланс и доступна к выводу.</p>
-              <a href="#" class="button order-btn">Купить 19 500  USD         </a>
+              <a data-popup href="#pay_build" class="button order-btn">Купить 19 500  USD         </a>
             </div>
           </div>
         </div>
@@ -395,7 +395,7 @@
           <option value="Украина" >Украина</option>
         </select>
         <label for="fp1">
-          <input id="fp1" type="text" value="100 usd">USD
+          <input id="fp1" type="number" value="100">USD
         </label>
         <span>=</span>
         <label for="fp2" class="disabled">
@@ -412,7 +412,7 @@
           <option value="Украина" >Украина</option>
         </select>
         <label for="fp1-1">
-          <input id="fp1-1" type="text" value="100 usd">USD
+          <input id="fp1-1" type="number" value="100">USD
         </label>
         <span>=</span>
         <label for="fp2-1" class="disabled">
@@ -425,7 +425,21 @@
       </form>
     </div>
   </div>
+ 
+ 
+   <div id="pay_build" class="modal mfp-hide white-popup-block">
 
+        <div class="pay-item">
+          <div class="title">Приобретение недвижимости </div>
+          <p>Вы собираетесь приобрести 1-комнатную квартиру, 41 кв2 за 18 500.00 USD. Подтверждаете покупку?</p>
+          
+        </div>
+
+        <div class="btn-broup">
+          <button type="submit" class="button"><span class="icon icon-plus"></span> Купить</button> 
+        <button title="Close (Esc)" type="button" class=" pay-close">Отмена</button>
+    </div>
+  </div>
   <script defer src="js/vendor.js"></script>
   <script defer src="js/app.js"></script>
 </body>

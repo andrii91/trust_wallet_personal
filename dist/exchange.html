@@ -150,7 +150,8 @@
                   </select>
                   <div class="info" id="curr_available_to">0.9392 USD</div>
                 </div>
-                <button type="submit" class="button">отправить заявку</button> <span class="info-bottom">Заявки на обмен обрабатываются от 30 секунд до 5 минут</span>
+<!--                <button type="submit" class="button">отправить заявку</button> <span class="info-bottom">Заявки на обмен обрабатываются от 30 секунд до 5 минут</span>-->
+                <a href="#exchange_1" data-popup class="button">отправить заявку</a> <span class="info-bottom">Заявки на обмен обрабатываются от 30 секунд до 5 минут</span>
               </form>
             </div>
           </div>
@@ -325,7 +326,7 @@
 
 
   <div class='menu menu-fixed'>
-    <input checked='checked' class='menu-toggler' id='menu-toggler' type='checkbox'>
+    <input  class='menu-toggler' id='menu-toggler' type='checkbox'>
     <label for='menu-toggler'><span class="icon-dollar-symbol"></span></label>
     <ul>
       <li class='menu-item'>
@@ -402,7 +403,7 @@
           <option value="Украина">Украина</option>
         </select>
         <label for="fp1">
-          <input id="fp1" type="text" value="100 usd">USD
+          <input id="fp1" type="number" value="100">USD
         </label>
         <span>=</span>
         <label for="fp2" class="disabled">
@@ -419,7 +420,7 @@
           <option value="Украина">Украина</option>
         </select>
         <label for="fp1-1">
-          <input id="fp1-1" type="text" value="100 usd">USD
+          <input id="fp1-1" type="number" value="100">USD
         </label>
         <span>=</span>
         <label for="fp2-1" class="disabled">
@@ -430,6 +431,20 @@
           <button title="Close (Esc)" type="button" class=" pay-close">Отмена</button>
         </div>
       </form>
+    </div>
+  </div>
+  
+    <div id="exchange_1" class="modal mfp-hide white-popup-block">
+
+        <div class="pay-item">
+          <div class="title">Обмен валюты</div>
+          <p>Вы совершаете обмен 1 BTC -> 7 743.00 USD. Коммиссия составляет 0.00490000 BTC. Подтверждаете обмен?</p>
+          
+        </div>
+
+        <div class="btn-broup">
+          <button type="submit" class="button"><span class="icon icon-plus"></span> Обменять</button> 
+        <button title="Close (Esc)" type="button" class=" pay-close">Отмена</button>
     </div>
   </div>
 

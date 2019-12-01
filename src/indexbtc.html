@@ -496,7 +496,7 @@
 
                     <span id="year_usd" class="input"></span>
                   </label>
-                  <a data-popup href="#pay" class="button">инвестировать</a>
+                  <a data-popup href="#pay_1" class="button">инвестировать</a>
                 </div>
               </div>
               <div class="worning"><span class="icon icon-warning-1"></span>Внимание, сумма дохода может меняться, в зависимости от кол-ва дней в месяце</div>
@@ -517,7 +517,7 @@
 
 
   <div class='menu menu-fixed'>
-    <input checked='checked' class='menu-toggler' id='menu-toggler' type='checkbox'>
+    <input  class='menu-toggler' id='menu-toggler' type='checkbox'>
     <label for='menu-toggler'><span class="icon-dollar-symbol"></span></label>
     <ul>
       <li class='menu-item'>
@@ -560,7 +560,7 @@
           <option value="Украина" >Украина</option>
         </select>
         <label for="fp1">
-          <input id="fp1" type="text" value="100 usd">USD
+          <input id="fp1" type="number" value="100">USD
         </label>
         <span>=</span>
         <label for="fp2" class="disabled">
@@ -577,7 +577,7 @@
           <option value="Украина" >Украина</option>
         </select>
         <label for="fp1-1">
-          <input id="fp1-1" type="text" value="100 usd">USD
+          <input id="fp1-1" type="number" value="100">USD
         </label>
         <span>=</span>
         <label for="fp2-1" class="disabled">
@@ -591,7 +591,7 @@
     </div>
   </div>
 
-  <div id="ladder_ranks"  class="modal mfp-hide white-popup-block">
+<div id="ladder_ranks"  class="modal mfp-hide white-popup-block">
     <div class="row">
       <div class="col-xl-2">
         <div class="ladder_ranks-img">
@@ -606,25 +606,25 @@
           <tr>
             <td>
               <table class="left">
-                <tr>
+                <tr class="bg1">
                   <td><span class="img"><img src="images/1234.png" alt=""></span>Инвестор</td>
                 </tr>
-                <tr>
+                <tr class="bg2">
                   <td><span class="img"><img src="images/34tergdfs.png" alt=""></span>Консультант</td>
                 </tr>
-                <tr>
+                <tr class="bg3">
                   <td><span class="img"><img src="images/32wrefsd.png" alt=""></span>Менеджер</td>
                 </tr>
-                <tr>
+                <tr class="bg4">
                   <td><span class="img"><img src="images/3ersf.png" alt=""></span>Лидер</td>
                 </tr>
-                <tr>
+                <tr class="bg5">
                   <td><span class="img"><img src="images/rgdfvxc.png" alt=""></span>Эксперт</td>
                 </tr>
-                <tr>
+                <tr class="bg6">
                   <td><span class="img"><img src="images/34rtgrfsd.png" alt=""></span>Мастер</td>
                 </tr>
-                <tr>
+                <tr class="bg7">
                   <td><span class="img"><img src="images/34teqw.png" alt=""></span>Гранд мастер</td>
                 </tr>
               </table>
@@ -662,7 +662,7 @@
                     <td>-</td>
                     <td>Ручка брендовая</td>
                   </tr>
-                  <tr>
+                  <tr class="bg3">
                     <td>2000 / 7000</td>
                     <td>12000 / 7000</td>
                     <td>Инвестор: <b>5</b></td>
@@ -708,6 +708,20 @@
           </tr>
         </table>
       </div>
+    </div>
+  </div>
+  <div id="pay_1" class="modal mfp-hide white-popup-block">
+
+        <div class="pay-item">
+          <div class="title">Инвестировать счёта USD</div>
+          <p>Вы можете пополнить свой USD счёт несколькими способами, выберите наиболее подходящий вам.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nulla corporis, quae asperiores cumque reiciendis blanditiis minima earum incidunt nobis, commodi repellendus, ad repudiandae impedit eius laboriosam at velit quaerat.</p>
+          
+        </div>
+
+        <div class="btn-broup">
+          <button type="submit" class="button"><span class="icon icon-plus"></span> Инвестировать</button> 
+        <button title="Close (Esc)" type="button" class=" pay-close">Отмена</button>
     </div>
   </div>
   <script defer src="js/vendor.js"></script>

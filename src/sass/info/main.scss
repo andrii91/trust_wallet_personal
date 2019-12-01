@@ -149,18 +149,17 @@ body {
       overflow: hidden;
       position: relative;
       border-radius: 50%;
-
+      z-index: 4;
       &:after {
         content: '';
         position: absolute;
-        top: -50%;
-        right: -50%;
-        bottom: -50%;
-        left: -50%;
+        top: 50%;
+        left: 50%;
         background: linear-gradient(to bottom, rgba(188, 69, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(188, 69, 255, 0));
-        transform: rotateZ(60deg) translate(-5em, 7.5em);
+        transform: rotateZ(60deg) translate(-50%, -50%);
         animation: sheen 5s ease-in-out 2s infinite;
-
+   width: 29px;
+        height: 29px;
         border-radius: 50%;
       }
 
@@ -247,11 +246,11 @@ body {
   }
 
   30% {
-    transform: rotateZ(60deg) translate(6em, -10em);
+    transform: rotateZ(60deg) translate(-50%, -50%);
   }
 
   100% {
-    transform: rotateZ(60deg) translate(6em, -10em);
+    transform: rotateZ(60deg) translate(-50%, -50%);
   }
 }
 
@@ -463,7 +462,7 @@ body {
 .show_tooltip {
   position: relative;
   cursor: pointer;
-
+z-index: 6;
   .tooltip {
     position: absolute;
     top: 140%;
@@ -662,7 +661,21 @@ body {
   padding: 24px 20px;
   min-height: 450px;
   height: 100%;
-
+    position: relative;
+  z-index: 3;
+  &:before {
+    content: "";
+    background: url('../images/graph.svg') no-repeat center;
+    width: 100%;
+    height: 145px;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+      
+  }
   .title {
     color: #242424;
     font-family: "SF Pro Display";
@@ -1973,6 +1986,10 @@ position: relative;
     box-shadow: 0 8px 21px rgba(200, 141, 2, 0.53);
     background-color: #2fc738;
     background-image: linear-gradient(to top, #f2bd42 0%, #fed01a 100%);
+    &:hover {
+        box-shadow: 0 8px 21px rgba(200, 141, 2, 0);
+    background-image: linear-gradient(to bottom, #f2bd42 0%, #fed01a 100%);
+    }
   }
 
   .header-item .summ .title,
@@ -1987,20 +2004,28 @@ position: relative;
   .tab-currency li.active a {
     color: #fed01a;
   }
+  input:focus {
+  border: 1px solid #fed01a !important;
+}
+
 
   .reinvest-item [type=radio]:checked + label:after,
   .withdrawal table td .success,
   .dataTables_wrapper .dataTables_paginate .paginate_button.current,
   .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
   .dataTables_wrapper .dataTables_paginate .paginate_button:hover,
-  .deposit table tbody tr,
   .chat-btn,
-  table.dataTable.dtr-inline.collapsed > tbody > tr[role=row] > td:first-child:before,
-  table.dataTable.dtr-inline.collapsed > tbody > tr[role=row] > th:first-child:before,
+//  table.dataTable.dtr-inline.collapsed > tbody > tr[role=row] > td:first-child:before,
+//  table.dataTable.dtr-inline.collapsed > tbody > tr[role=row] > th:first-child:before,
   .modal .mfp-close {
     background: #fed01a;
   }
-
+  .show_tooltip .tooltip {
+    border-color: #fed01a;
+  }
+  .deposit table tbody tr {
+    background: #eeb121;
+  }
   .reinvest-item [type=checkbox] + label:after {
     background: url(../images/forma_2.png) no-repeat center;
   }
@@ -2035,6 +2060,18 @@ position: relative;
 
   .reinvest {
     background-image: url(../images/rbg2.png);
+    &:before {
+      content: "";
+    background: url(../images/graph2.svg) no-repeat center;
+    width: 100%;
+    height: 145px;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    }
   }
 
   .chat-btn {
@@ -2097,20 +2134,18 @@ position: relative;
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: 0;
+    z-index: -1;
   }
 
-  * {
     position: relative;
     z-index: 2;
-  }
 }
 
 .exchange {
   margin-top: 19px;
 
   .dataTables_wrapper label {
-    margin-bottom: 16px;
+    margin-bottom: 13px;
   }
 
   .header-title {
@@ -2122,7 +2157,9 @@ position: relative;
     top: 5px;
     left: 15px;
   }
-
+table.dataTable {
+    padding: 9px 8px 10px;
+}
   table {
     box-shadow: 0 7px 21px rgba(229, 232, 239, 0.4);
     border-radius: 6px;
@@ -2139,6 +2176,14 @@ position: relative;
       text-transform: uppercase;
       padding-left: 15px !important;
     }
+    tbody {
+      tr {
+         background-color: #f0f3f7;
+        &:hover {
+              background: #e5e9ee!important;
+        }
+      }
+    }
 
     td {
       color: #474a47;
@@ -2147,7 +2192,6 @@ position: relative;
       font-weight: 400;
       line-height: 1;
       text-transform: uppercase;
-      background-color: #f0f3f7;
       padding: 8px 3px !important;
 
       &:first-child {
@@ -2772,7 +2816,11 @@ position: relative;
 .ranks-table {
   width: 100% !important;
   border-spacing: 0 5px;
-
+  padding: 0!important;
+  &.dataTable {
+    margin-top: 20px;
+    
+  }
   tr {
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 
@@ -3571,7 +3619,7 @@ position: relative;
 
     .btn {
       float: right;
-      border-radius: 3px;
+      border-radius: 1px; 
       background-color: #ef204c;
       color: #ffffff;
       font-family: "SF Pro Display";
@@ -4097,6 +4145,27 @@ position: relative;
       tr {
         background-color: #2fc738;
         border-radius: 3px;
+        &.bg1{
+          background-color: rgba(47, 199, 56, .2);
+        }
+        &.bg2{
+          background-color: rgba(47, 199, 56, .3);
+        }
+        &.bg3{
+          background-color: rgba(47, 199, 56, .4);
+        }
+        &.bg4{
+          background-color: rgba(47, 199, 56, .5);
+        }
+        &.bg5{
+          background-color: rgba(47, 199, 56, .6);
+        }
+        &.bg6{
+          background-color: rgba(47, 199, 56, .8);
+        }
+        &.bg7{
+          background-color: rgba(47, 199, 56, 1);
+        }
 
         td {
           color: #3d3f43;
@@ -4178,6 +4247,28 @@ position: relative;
 
       tbody {
         tr {
+           &.bg1{
+          background-color: rgba(47, 199, 56, .2);
+        }
+        &.bg2{
+          background-color: rgba(47, 199, 56, .3);
+        }
+        &.bg3{
+          background-color: rgba(47, 199, 56, .4);
+        }
+        &.bg4{
+          background-color: rgba(47, 199, 56, .5);
+        }
+        &.bg5{
+          background-color: rgba(47, 199, 56, .6);
+        }
+        &.bg6{
+          background-color: rgba(47, 199, 56, .8);
+        }
+        &.bg7{
+          background-color: rgba(47, 199, 56, 1);
+        }
+
           &:nth-child(1) {
             td {
               &:nth-child(3) {
@@ -4342,4 +4433,110 @@ position: relative;
 
 #table-deposit {
   width: 100% !important;
+}
+
+#pay_1 {
+  .pay-item {
+    margin-bottom: 30px;
+    p {
+      max-width: 100%;
+    }
+  }
+}
+
+#exchange_1 {
+  .pay-item {
+    margin-bottom: 30px;
+    p {
+max-width: 100%;
+    }
+  }
+}
+
+#pay_build {
+  .pay-item {
+    margin-bottom: 20px;
+    p {
+      max-width: 100%;
+    }
+  }
+}
+
+.bonus-item {
+  box-shadow: 0 1px 10px rgba(141, 149, 160, 0.1);
+border-radius: 3px;
+background-color: #ffffff;
+  padding: 16px 23px;
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.bonus-day {
+font-family: "SF Pro Display";
+font-size: 14px;
+line-height: 1;
+  .title {
+    color: #030303;
+font-weight: 700;
+text-transform: uppercase;
+margin-bottom: 0;
+
+  }
+  p {
+        span {
+      color: #26be32;
+    }
+font-weight: 600;
+    margin-bottom: 20px;
+  }
+}
+
+.bonus-progress {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+  margin-bottom: 15px;
+
+}
+
+.progress-line {
+    border-radius: 4px;
+background-color: #f0f3f6;
+  height: 8px;
+  width: calc(100% - 35px);
+  display: inline-block;
+  span {
+  height: 8px;
+    display: block;
+    border-radius: 4px;
+background-color: #34d341;
+  }
+}
+
+.progress-title {
+  float: right;
+  color: #a4aab3;
+  font-family: "SF Pro Display";
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 27px;
+  text-transform: uppercase;
+  margin-left: 11px;
+}
+
+.progress-img {
+  margin-bottom: 10px;
+}
+
+.progress-info {
+  color: #212224;
+font-family: "SF Pro Display";
+font-size: 12px;
+font-weight: 500;
+line-height: 15px;
 }
