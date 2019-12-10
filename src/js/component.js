@@ -370,9 +370,9 @@ $(document).ready(function () {
     }
     if ($('.calc-radio li.active').hasClass('active') && $('.calc-radio li.active').data('click') == 'show') {
       $('.security-show').trigger('click');
-    }else{
+    } else {
       $('.security-show_security_no').trigger('click');
-      
+
     }
 
     usd_calc();
@@ -550,8 +550,8 @@ $(document).ready(function () {
     if ($(this).parents('.block-icon').hasClass('show-next')) {
       $(this).parents('.block-icon').removeClass('show-next');
       $(this).parents('.block-icon').next().css('display', 'none');
-/*      $(this).parents('.block-icon').nextAll().removeClass('show-next');
-      $(this).parents('.block-icon').nextAll().css('display', 'none');*/
+      /*      $(this).parents('.block-icon').nextAll().removeClass('show-next');
+            $(this).parents('.block-icon').nextAll().css('display', 'none');*/
     } else {
       $(this).parents('.block-icon').addClass('show-next');
       $(this).parents('.block-icon').next().css('display', 'flex');
@@ -732,28 +732,28 @@ $(document).ready(function () {
 
   //  https://stripe.dev/jquery.payment/example/
 
-//  $('[data-numeric]').payment('restrictNumeric');
+  //  $('[data-numeric]').payment('restrictNumeric');
   $('.cc-number').payment('formatCardNumber');
-//  $('.cc-exp').payment('formatCardExpiry');
-//  $('.cc-cvc').payment('formatCardCVC');
-/*  $.fn.toggleInputError = function (erred) {
-    this.parent('.form-group').toggleClass('has-error', erred);
-    return this;
-  };
-  $('form').submit(function (e) {
-    e.preventDefault();
-    var cardType = $.payment.cardType($('.cc-number').val());
-    $('.cc-number').toggleInputError(!$.payment.validateCardNumber($('.cc-number').val()));
-    $('.cc-exp').toggleInputError(!$.payment.validateCardExpiry($('.cc-exp').payment('cardExpiryVal')));
-    $('.cc-cvc').toggleInputError(!$.payment.validateCardCVC($('.cc-cvc').val(), cardType));
-    $('.cc-brand').text(cardType);
-    $('.validation').removeClass('text-danger text-success');
-    $('.validation').addClass($('.has-error').length ? 'text-danger' : 'text-success');
-  });*/
+  //  $('.cc-exp').payment('formatCardExpiry');
+  //  $('.cc-cvc').payment('formatCardCVC');
+  /*  $.fn.toggleInputError = function (erred) {
+      this.parent('.form-group').toggleClass('has-error', erred);
+      return this;
+    };
+    $('form').submit(function (e) {
+      e.preventDefault();
+      var cardType = $.payment.cardType($('.cc-number').val());
+      $('.cc-number').toggleInputError(!$.payment.validateCardNumber($('.cc-number').val()));
+      $('.cc-exp').toggleInputError(!$.payment.validateCardExpiry($('.cc-exp').payment('cardExpiryVal')));
+      $('.cc-cvc').toggleInputError(!$.payment.validateCardCVC($('.cc-cvc').val(), cardType));
+      $('.cc-brand').text(cardType);
+      $('.validation').removeClass('text-danger text-success');
+      $('.validation').addClass($('.has-error').length ? 'text-danger' : 'text-success');
+    });*/
 
-  
-  
-  
+
+
+
   function timer() {
 
 
@@ -775,7 +775,7 @@ $(document).ready(function () {
         $('.hours').text("00");
         $('.minutes').text("00");
         $('.seconds').text("00");
-//        $('.milliseconds').text("00");
+        //        $('.milliseconds').text("00");
 
         clearInterval(intervalTimer);
         return;
@@ -796,7 +796,7 @@ $(document).ready(function () {
       $('.hours').text(hours);
       $('.minutes').text(minutes);
       $('.seconds').text(seconds);
-//      $('.milliseconds').text(miliseconds);
+      //      $('.milliseconds').text(miliseconds);
 
 
     };
@@ -804,5 +804,30 @@ $(document).ready(function () {
     var intervalTimer = setInterval(showRemaining, 10);
   }
   timer();
+
+
+  $('.ladder_ranks-info').click(function () {
+    $(this).hide(200);
+  });
+
+
+
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1
+      }
+    }
+  })
   
+    $('.progress-bar').each(function () {
+    var $from = $(this);
+    $from.find('span').css({
+      'width': ($from.data('scale') / $from.data('all') * 100) + '%'
+    })
+  })
+
 });

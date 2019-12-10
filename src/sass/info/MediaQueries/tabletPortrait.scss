@@ -3,11 +3,11 @@
 @media #{$tabletPortrait} {
     @import '../mobile';
   	& {
-      #scroll-tbl {
+/*      #scroll-tbl {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
     width: 69vw;
-}
+}*/
 	}
 }

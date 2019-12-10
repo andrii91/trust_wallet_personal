@@ -530,7 +530,7 @@
   }
 
   .ladder_ranks-table table.left {
-    margin-top: 52px;
+    margin-top: 51px;
     border-radius: 3px;
     width: 132px;
   }
@@ -544,8 +544,12 @@
     overflow-x: auto;
     white-space: nowrap;
     width: 42vw;
+    width: calc(100vw - 147px);
   }
-
+  #ladder_ranks {
+    padding-left: 0;
+    padding-right: 0;
+  }
   main {
     overflow-x: hidden;
   }
@@ -718,5 +722,24 @@
   }
   .xs-center {
     text-align: center;
+  }
+  
+  .ladder_ranks-table table.right td {
+    font-size: 10px;
+  }
+  .ladder_ranks-table table.right thead tr:nth-child(2) th {
+    font-size: 8px;
+  }
+  
+  .owl-carousel .owl-item .bonus_modal-img  {
+    text-align: center;
+    margin-bottom: 20px;
+    img {
+    max-width: inherit;
+    width: inherit;
+    max-height: 30vh;
+      margin-left: auto;
+      margin-right: auto;
+  }
   }
 }

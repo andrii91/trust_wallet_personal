@@ -36,7 +36,7 @@
             </ul>
           </div>
           <ul class="bonus">
-            <li><a href="#"><span class="icon icon-giftbox"></span></a></li>
+            <li><a data-popup href="#bonus_modal"><span class="icon icon-giftbox"></span></a></li>
             <li><a href="#"><span class="icon icon-diamond"></span></a></li>
             <li><a class="lang" href="#">UA</a>
               <ul class="lang-list">
@@ -80,13 +80,13 @@
   <nav class="nav">
     <div class="container">
       <div id="nav-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul class="nav-menu">
         <li><a href="index.html"><span class="icon icon-menu"></span>УПРАВЛЕНИе</a></li>
         <li><a href="wallet-usd.html"><span class="icon icon-wallet"></span>КОШЕЛЕК</a></li>
@@ -517,14 +517,14 @@
 
 
   <div class='menu menu-fixed m-close'>
-    <input  class='menu-toggler' id='menu-toggler' type='checkbox'>
+    <input class='menu-toggler' id='menu-toggler' type='checkbox'>
     <label for='menu-toggler'><span class="icon-dollar-symbol"></span></label>
     <ul>
       <li class='menu-item'>
         <a class=' icon-bitcoin' href='indexbtc.html' target='_blank'></a>
       </li>
       <li class='menu-item'>
-        <a  href='#' target='_blank'>$</a>
+        <a href='#' target='_blank'>$</a>
       </li>
       <li class='menu-item'>
         <a class='icon icon-diamond' href='#' target='_blank'></a>
@@ -532,7 +532,7 @@
 
     </ul>
   </div>
-  
+
   <a href="#" class="chat-btn"><span class="icon-chat"></span></a>
 
   <div id="pay" class="modal mfp-hide white-popup-block">
@@ -551,13 +551,13 @@
     </div>
     <ul class="tab-currency">
       <li><a href="#bitctab"><span class="icon-bitcoin"></span> Криптовалюта</a></li>
-      <li  class="active"><a href="#usdtab"><span class="icon-credit-card"></span> Visa / MasterCard</a></li>
+      <li class="active"><a href="#usdtab"><span class="icon-credit-card"></span> Visa / MasterCard</a></li>
     </ul>
     <div class="tab-content">
       <form class="form-pay tab-item active" action="#" id="usdtab">
-        <select name="" >
+        <select name="">
           <option value="Украина" selected>Украина</option>
-          <option value="Украина" >Украина</option>
+          <option value="Украина">Украина</option>
         </select>
         <label for="fp1">
           <input id="fp1" type="number" value="100">USD
@@ -566,15 +566,15 @@
         <label for="fp2" class="disabled">
           <input id="fp2" type="text" value="0.1000000 " disabled>UAH
         </label>
-       <div class="btn-broup">
-          <button type="submit" class="button"><span class="icon icon-plus"></span> Пополнить счет</button> 
-        <button title="Close (Esc)" type="button" class=" pay-close">Отмена</button>
+        <div class="btn-broup">
+          <button type="submit" class="button"><span class="icon icon-plus"></span> Пополнить счет</button>
+          <button title="Close (Esc)" type="button" class=" pay-close">Отмена</button>
         </div>
       </form>
       <form class="form-pay tab-item" action="#" id="bitctab">
-        <select name="" >
+        <select name="">
           <option value="Украина" selected>Украина</option>
-          <option value="Украина" >Украина</option>
+          <option value="Украина">Украина</option>
         </select>
         <label for="fp1-1">
           <input id="fp1-1" type="number" value="100">USD
@@ -584,8 +584,8 @@
           <input id="fp2-1" type="text" value="0.1000000 " disabled>BTC
         </label>
         <div class="btn-broup">
-          <button type="submit" class="button"><span class="icon icon-plus"></span> Пополнить счет</button> 
-        <button title="Close (Esc)" type="button" class=" pay-close">Отмена</button>
+          <button type="submit" class="button"><span class="icon icon-plus"></span> Пополнить счет</button>
+          <button title="Close (Esc)" type="button" class=" pay-close">Отмена</button>
         </div>
       </form>
     </div>
@@ -593,19 +593,20 @@
 
   <div id="pay_1" class="modal mfp-hide white-popup-block">
 
-        <div class="pay-item">
-          <div class="title">Инвестировать счёта USD</div>
-          <p>Вы можете пополнить свой USD счёт несколькими способами, выберите наиболее подходящий вам.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nulla corporis, quae asperiores cumque reiciendis blanditiis minima earum incidunt nobis, commodi repellendus, ad repudiandae impedit eius laboriosam at velit quaerat.</p>
-          
-        </div>
+    <div class="pay-item">
+      <div class="title">Инвестировать счёта USD</div>
+      <p>Вы можете пополнить свой USD счёт несколькими способами, выберите наиболее подходящий вам.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nulla corporis, quae asperiores cumque reiciendis blanditiis minima earum incidunt nobis, commodi repellendus, ad repudiandae impedit eius laboriosam at velit quaerat.</p>
 
-        <div class="btn-broup">
-          <button type="submit" class="button"><span class="icon icon-plus"></span> Инвестировать</button> 
-        <button title="Close (Esc)" type="button" class=" pay-close">Отмена</button>
+    </div>
+
+    <div class="btn-broup">
+      <button type="submit" class="button"><span class="icon icon-plus"></span> Инвестировать</button>
+      <button title="Close (Esc)" type="button" class=" pay-close">Отмена</button>
     </div>
   </div>
-    <div id="ladder_ranks"  class="modal mfp-hide white-popup-block">
+  <div id="ladder_ranks" class="modal mfp-hide white-popup-block">
+   <div class="ladder_ranks-info">Для отображения детальной таблицы переверните устройство в горизонатльное положение</div>
     <div class="row">
       <div class="col-xl-2">
         <div class="ladder_ranks-img">
@@ -695,7 +696,10 @@
                   <tr>
                     <td>5000 / 7000</td>
                     <td>155000 / 7000</td>
-                    <td><div>Лидер: <b>2</b></div> <div>Менеджер: <b>1</b></div></td>
+                    <td>
+                      <div>Лидер: <b>2</b></div>
+                      <div>Менеджер: <b>1</b></div>
+                    </td>
                     <td>30000 / 7000</td>
                     <td>200000 / 0</td>
                     <td>Значок с бриллиантом<br> Macbook Pro</td>
@@ -703,7 +707,10 @@
                   <tr>
                     <td>7000 / 7000</td>
                     <td>307000 / 7000</td>
-                    <td><div>Эксперт: <b>1</b></div> <div>Лидер: <b>1</b></div></td>
+                    <td>
+                      <div>Эксперт: <b>1</b></div>
+                      <div>Лидер: <b>1</b></div>
+                    </td>
                     <td>40000 / 7000</td>
                     <td>500000 / 0</td>
                     <td>Автобонус (до 30000$)<br> брендирование</td>
@@ -711,7 +718,10 @@
                   <tr>
                     <td>10000 / 7000</td>
                     <td>1000000 / 7000</td>
-                    <td><div>Мастер: <b>2</b></div> <div>Эксперт: <b>1</b></div></td>
+                    <td>
+                      <div>Мастер: <b>2</b></div>
+                      <div>Эксперт: <b>1</b></div>
+                    </td>
                     <td>60000 / 7000</td>
                     <td>2000000 / 0</td>
                     <td>Автобонус (Premium class ) <br>+ часы с бриллиантами</td>
@@ -724,6 +734,96 @@
       </div>
     </div>
   </div>
+  
+  
+   <div id="bonus_modal" class="modal mfp-hide white-popup-block">
+      <div class="owl-carousel owl-theme no-js">
+
+        <div class="item">
+          <div class="row">
+            <div class="col-12 col-xl-4">
+              <div class="bonus_modal-img">
+                <img src="images/54trga.png" alt="">
+              </div>
+            </div>
+            <div class="col-12 col-xl-8">
+              <div class="bonus_modal-item">
+                <div class="bonus_modal-title">Промоушен на iphone 11</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="bonus_modal-progres">
+                  <div class="title">Личная инвестиция, USD</div>
+                  <div class="progress-bar" data-scale="8500" data-all="15000"><span>8500</span> 15 000</div>
+                </div>
+                <div class="bonus_modal-progres">
+                  <div class="title">Оборот 1-й линии, USD</div>
+                  <div class="progress-bar" data-scale="1050" data-all="2000"><span>1050</span> 2000</div>
+                </div>
+                <div class="bonus_modal-progres">
+                  <div class="title">Оборот 2-10-й линий, USD</div>
+                  <div class="progress-bar" data-scale="1050" data-all="4000"><span>1050</span> 4000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="row">
+            <div class="col-12 col-xl-4">
+              <div class="bonus_modal-img">
+                <img src="images/54trga.png" alt="">
+              </div>
+            </div>
+            <div class="col-12 col-xl-8">
+              <div class="bonus_modal-item">
+                <div class="bonus_modal-title">Промоушен на iphone 11</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="bonus_modal-progres">
+                  <div class="title">Личная инвестиция, USD</div>
+                  <div class="progress-bar" data-scale="8500" data-all="15000"><span>8500</span> 15 000</div>
+                </div>
+                <div class="bonus_modal-progres">
+                  <div class="title">Оборот 1-й линии, USD</div>
+                  <div class="progress-bar" data-scale="1050" data-all="2000"><span>1050</span> 2000</div>
+                </div>
+                <div class="bonus_modal-progres">
+                  <div class="title">Оборот 2-10-й линий, USD</div>
+                  <div class="progress-bar" data-scale="1050" data-all="4000"><span>1050</span> 4000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="row">
+            <div class="col-12 col-xl-4">
+              <div class="bonus_modal-img">
+                <img src="images/54trga.png" alt="">
+              </div>
+            </div>
+            <div class="col-12 col-xl-8">
+              <div class="bonus_modal-item">
+                <div class="bonus_modal-title">Промоушен на iphone 11</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="bonus_modal-progres">
+                  <div class="title">Личная инвестиция, USD</div>
+                  <div class="progress-bar" data-scale="8500" data-all="15000"><span>8500</span> 15 000</div>
+                </div>
+                <div class="bonus_modal-progres">
+                  <div class="title">Оборот 1-й линии, USD</div>
+                  <div class="progress-bar" data-scale="1050" data-all="2000"><span>1050</span> 2000</div>
+                </div>
+                <div class="bonus_modal-progres">
+                  <div class="title">Оборот 2-10-й линий, USD</div>
+                  <div class="progress-bar" data-scale="1050" data-all="4000"><span>1050</span> 4000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <script defer src="js/vendor.js"></script>
   <script defer src="js/app.js"></script>
