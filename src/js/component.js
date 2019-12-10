@@ -807,7 +807,7 @@ $(document).ready(function () {
 
 
   $('.ladder_ranks-info').click(function () {
-    $(this).hide(200);
+    $(this).parent().find('.mfp-close').trigger('click');
   });
 
 
