@@ -33,6 +33,7 @@
     <li><a class="button" data-popup href="#exchange_1">Обмен валюты</a></li>
     <li><a class="button" data-popup href="#security_no">Отключение двухфакторной аутентификации</a></li>
     <li><a class="button" data-popup href="#bonus_modal">промо модалка которую над повестьи на иконку с подарком в верху которая</a></li>
+    <li><a class="button" data-popup href="#add_reviews">Написать отзыв </a></li>
   </ul>
   
     <div id="security_no" class="modal mfp-hide white-popup-block xs-center security">
@@ -761,6 +762,31 @@
       </div>
     </div>
   
+  
+    <div id="add_reviews" class="modal mfp-hide white-popup-block">
+      <div class="row align-items-center">
+      <div class="col-xl-3 col-3">
+        <div class="img">
+          <img src="images/234trgf.png" alt="">
+        </div>
+      </div>
+      <div class="col-xl-9 col-9">
+        <div class="pay-item">
+          <div class="title">Написать отзыв </div>
+          <p>Ваш отзыв будет добавлен в течении 60 секунди</p>
+        </div>
+      </div>
+    </div>
+    <form action="#" class="add_reviews-form">
+      <label for="r_name">Ваше имя
+        <input id="r_name" type="r_name" placeholder="Напишите ваше имя" required>
+      </label>
+      <label for="r_mess">Сообщение
+        <textarea name="r_mess" id="r_mess" placeholder="Напишите сообщение" required></textarea>
+      </label>
+      <button type="submit" class="button">Отправить</button>
+    </form>
+  </div>
   <script defer src="js/vendor.js"></script>
   <script defer src="js/app.js"></script>
 </body>

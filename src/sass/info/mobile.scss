@@ -747,4 +747,37 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .n_wallet-info {
+    text-align: left;
+  }
+  .n_wallet-item {
+    .col {
+      margin-bottom: 30px;
+    }
+  }
+  .mb40 {
+    margin-bottom: 0;
+  }
+  .n_wallet-graf_info {
+    position: static;
+    padding: 20px;
+  }
+  .n_wallet-graf_content {
+    margin-bottom: 30px;
+  }
+  .n_wallet-img {
+    margin-top: 30px;
+  }
+  
+  .reviews-item {
+    text-align: left;
+  }
+  .reviews-item .reviews-rang {
+    margin-bottom: 0;
+  }
+  .reviews-star {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
 }

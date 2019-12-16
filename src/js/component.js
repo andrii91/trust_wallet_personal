@@ -243,6 +243,13 @@ $(document).ready(function () {
     responsive: true
   });
 
+  $('#table-transactions_n').DataTable({
+    "dom": '<pft>',
+    "lengthMenu": [[7, 250, -1], [10, 25, 50, "All"]],
+    "pagingType": "simple_numbers",
+    responsive: true
+  });
+
 
   $('#table-exchange').DataTable({
     "dom": '<pft>',
@@ -822,12 +829,97 @@ $(document).ready(function () {
       }
     }
   })
-  
-    $('.progress-bar').each(function () {
+
+  $('.progress-bar').each(function () {
     var $from = $(this);
     $from.find('span').css({
       'width': ($from.data('scale') / $from.data('all') * 100) + '%'
     })
   })
 
+  
+  
+    //  CHART
+  if ($("#n_wallet-chart").length > 0) {
+    var ctx1 = document.getElementById("n_wallet-chart").getContext("2d");
+    ctx1.canvas.height = 186;
+
+    if ($('body').hasClass('btc-template')) {
+      //background-image: linear-gradient(to top, #f2bd42 0%, #fed01a 100%);
+      var white_gradient_usd = ctx1.createLinearGradient(0, 0, 0, 400);
+      white_gradient_usd.addColorStop(0, 'rgba(254, 208, 26, 0)');
+      white_gradient_usd.addColorStop(1, 'rgba(254, 208, 26, 0.5)');
+      var color_graf = "#fed01a";
+    } else {
+      var white_gradient_usd = ctx1.createLinearGradient(0, 0, 0, 400);
+//      white_gradient_usd.addColorStop(0, 'rgba(106, 211, 110, 0)');
+      white_gradient_usd.addColorStop(1, '#49d051');
+      var color_graf = "#49d051";
+
+    }
+
+
+    var empSatOptionsUSD = {
+      responsive: true,
+      maintainAspectRatio: false,
+      datasetStrokeWidth: 3,
+      pointDotStrokeWidth: 4,
+      tooltipFillColor: "rgba(0,0,0,0.8)",
+      legend: {
+        display: false
+      },
+      hover: {
+        mode: 'label'
+      },
+      scales: {
+        xAxes: [{
+          display: false
+                }],
+        yAxes: [{
+          display: false,
+          ticks: {
+            min: 0,
+            max: 85
+          }
+                }]
+      },
+      title: {
+        display: false,
+        fontColor: "#FFF",
+        fullWidth: false,
+        fontSize: 40,
+        text: '82%'
+      }
+    };
+    var empSatDataUSD = {
+      labels: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль"],
+      datasets: [{
+        label: "Доход:",
+        data: [28, 35, 36, 48, 46, 42, 60],
+        backgroundColor: white_gradient_usd,
+        borderColor: color_graf,
+        borderWidth: 3,
+        strokeColor: "#4e9a00",
+        pointColor: "#fff",
+        pointBorderColor: color_graf,
+        pointBackgroundColor: "#fff",
+        pointBorderWidth: 5,
+        pointHoverBorderWidth: 7,
+        pointRadius: 5
+            }]
+    };
+    var empSatConfigUSD = {
+      type: 'line',
+      options: empSatOptionsUSD,
+      data: empSatDataUSD
+    };
+    new Chart(ctx1, empSatConfigUSD);
+  }
+
+  
+  $('.morebtn').click(function(){
+    $(this).toggleClass('open');
+    $(this).parent().find('.more').slideToggle('200');
+  })
+  
 });
