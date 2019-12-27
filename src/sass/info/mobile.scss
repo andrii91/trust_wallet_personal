@@ -162,7 +162,13 @@
 
   .header-item .summ .info {
     text-align: left;
-
+    padding-right: 16px;
+    position: relative;
+    .icon {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
     br {
       display: none;
     }
@@ -304,11 +310,13 @@
     margin-left: auto;
     margin-right: auto;*/
     width: 34vw;
+    width: calc(100%/2 - 23px);
     font-size: 12px;
 
     input {
       font-size: 12px;
       width: 21vw;
+      width: calc(100% - 50px);
     }
   }
 
@@ -617,7 +625,7 @@
 
   .profile {
     float: left;
-
+margin-right: 0;
   }
 
   .bonus {
@@ -642,6 +650,9 @@
 
   .withdrawal table th {
     text-align: center;
+  }
+  .profile .profile-menu {
+    z-index: 999;
   }
 
   &.btc-template .reinvest:before {

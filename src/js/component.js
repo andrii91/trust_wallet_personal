@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 
   $('.show_tooltip').hover(function () {
-    $(this).append('<div class="tooltip">' + $(this).data('tooltip') + '</div>')
+    $(this).append('<div class="tooltip show">' + $(this).data('tooltip') + '</div>')
   }, function () {
     $('.tooltip').remove();
   });
@@ -423,10 +423,7 @@ $(document).ready(function () {
     $('.mfp-close').trigger('click')
   })
 
-  $('.form-pay').on('submit', function (e) {
-    e.preventDefault();
-    $(this).addClass('submit-form');
-  })
+
 
   $('#nav-icon').click(function () {
     $(this).toggleClass('open');
@@ -672,11 +669,13 @@ $(document).ready(function () {
       return "+" + selectedCountryData.dialCode;
     },
     geoIpLookup: function (success, failure) {
-      /*
-      $.get( "https://ip-api.com/json/", function( data ) {
-      	var countryCode = (data.countryCode) ? data.countryCode : "ru";
+      
+      /*$.get( "https://ip-api.com/json/", function () {}, "jsonp").always(function (resp) {
+      	var country = (resp.country) ? resp.country : "Ukraine";
+        $('#country').val(country);
+        var countryCode = (resp.countryCode) ? resp.countryCode : "ua";
       	success(countryCode);
-      }, "json" );*/
+      });*/
 
       $.get("https://ipinfo.io", function () {}, "jsonp").always(function (resp) {
         var countryCode = (resp && resp.country) ? resp.country : "ua";
@@ -920,6 +919,25 @@ $(document).ready(function () {
   $('.morebtn').click(function(){
     $(this).toggleClass('open');
     $(this).parent().find('.more').slideToggle('200');
+  });
+  
+  
+  /*========New==========*/
+
+$('.history-profile .summ').each(function(){
+  var summLength = $(this)[0].innerText;
+  
+  if(summLength.length > 10) {
+    $(this).css({
+      'font-size' : '30px'
+    })
+  }
+})
+  
+  $('form').on('submit', function (e) {
+//    e.preventDefault();
+    $(this).addClass('submit-form');
   })
   
+  $('#country').select2();
 });
