@@ -197,11 +197,21 @@ $(document).ready(function () {
 
 
 
-  $(".item-scroll").mCustomScrollbar({
+/*  $(".item-scroll").mCustomScrollbar({
     scrollButtons: {
       enable: true
     }
-  });
+  });*/
+  
+  
+      $(window).resize(function(){
+        if($(this).width()>768){
+           $(".item-scroll").mCustomScrollbar(); //apply scrollbar with your options 
+        }else{
+           $(".item-scroll").mCustomScrollbar("destroy"); //destroy scrollbar 
+        }
+    }).trigger("resize");
+  
 
   $('.rang-scale').each(function () {
     var $from = $(this);
@@ -706,6 +716,11 @@ $(document).ready(function () {
     copyText.select();
 
     document.execCommand("copy");
+    $(this).parent().append('<div class="copy_success"> РЕФЕРАЛЬНАЯ ССЫЛКА СКОПИРОВАНА </div>');
+    
+    setTimeout(function(){
+      $('.copy_success').remove();
+    }, 1500)
   })
 
   $('.video').each(function () {
@@ -759,11 +774,12 @@ $(document).ready(function () {
 
 
 
+//var date ='2020-01-07 12:51:00';
+  function timer(data) {
 
-  function timer() {
-
-
-    var end = new Date(2019, 11, 7, 00, 00, 00, 00);
+//console.log(date);
+    var end = new Date(data);
+//    var end = new Date(2019, 12, 7, 00, 00, 00, 00);
 
     var _milisec = 10;
     var _second = _milisec * 100;
@@ -809,7 +825,7 @@ $(document).ready(function () {
 
     var intervalTimer = setInterval(showRemaining, 10);
   }
-  timer();
+  timer($('.bonus-day').data('date'));
 
 
   $('.ladder_ranks-info').click(function () {
@@ -846,14 +862,14 @@ $(document).ready(function () {
     if ($('body').hasClass('btc-template')) {
       //background-image: linear-gradient(to top, #f2bd42 0%, #fed01a 100%);
       var white_gradient_usd = ctx1.createLinearGradient(0, 0, 0, 400);
-      white_gradient_usd.addColorStop(0, 'rgba(254, 208, 26, 0)');
-      white_gradient_usd.addColorStop(1, 'rgba(254, 208, 26, 0.5)');
+      white_gradient_usd.addColorStop(0, '#2fc738');
+      white_gradient_usd.addColorStop(1, '#2fc738');
       var color_graf = "#fed01a";
     } else {
       var white_gradient_usd = ctx1.createLinearGradient(0, 0, 0, 400);
 //      white_gradient_usd.addColorStop(0, 'rgba(106, 211, 110, 0)');
-      white_gradient_usd.addColorStop(1, '#49d051');
-      var color_graf = "#49d051";
+      white_gradient_usd.addColorStop(1, '#4cd053');
+      var color_graf = "#4cd053";
 
     }
 
@@ -896,12 +912,12 @@ $(document).ready(function () {
         label: "Доход:",
         data: [28, 35, 36, 48, 46, 42, 60],
         backgroundColor: white_gradient_usd,
-        borderColor: color_graf,
+        borderColor: '#6fd674',
         borderWidth: 3,
-        strokeColor: "#4e9a00",
-        pointColor: "#fff",
+        strokeColor: "#75d779",
+        pointColor: "#75d779",
         pointBorderColor: color_graf,
-        pointBackgroundColor: "#fff",
+        pointBackgroundColor: "#aee9b1",
         pointBorderWidth: 5,
         pointHoverBorderWidth: 7,
         pointRadius: 5

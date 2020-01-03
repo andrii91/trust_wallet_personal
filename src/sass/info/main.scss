@@ -591,6 +591,11 @@ body {
   &.disable {
     background: #fda830;
     box-shadow: 0 0;
+    height: 45px;
+    width: 100%;
+    text-align: center;
+  padding: 11px 10px 11px 10px;
+    
   }
 
   .icon {
@@ -619,7 +624,7 @@ body {
   margin-top: 25px;
   padding-top: 21px;
   margin-bottom: 35px;
-
+position: relative;
   .graf-title {
     color: #242424;
     font-family: "SF Pro Display";
@@ -2612,19 +2617,61 @@ form {
 
   }
 
-  &.level4 {
+  &.level1 {
     .team-td {}
+  }
+
+  &.level2 {
+    &:before {
+      width: calc(100% - 5px);
+    }
+
+    .team-td:first-child {
+      -ms-flex: 0 0 calc(16.666666667% - 5px);
+      flex: 0 0 calc(16.666666667% - 5px);
+      max-width: calc(16.666666667% - 5px);
+      margin-left: auto;
+
+    }
+  }
+
+  &.level3 {
+    &:before {
+      width: calc(100% - 15px);
+    }
+
+    .team-td:first-child {
+      -ms-flex: 0 0 calc(16.666666667% - 15px);
+      flex: 0 0 calc(16.666666667% - 15px);
+      max-width: calc(16.666666667% - 15px);
+      margin-left: auto;
+
+    }
+  }
+
+  &.level4 {
+    &:before {
+      width: calc(100% - 25px);
+    }
+
+    .team-td:first-child {
+      -ms-flex: 0 0 calc(16.666666667% - 25px);
+      flex: 0 0 calc(16.666666667% - 25px);
+      max-width: calc(16.666666667% - 25px);
+      margin-left: auto;
+
+    }
   }
 
   &.level5 {
     &:before {
-      width: calc(100% - 13px);
+      width: calc(100% - 35px);
     }
 
     .team-td:first-child {
-      -ms-flex: 0 0 calc(16.666666667% - 13px);
-      flex: 0 0 calc(16.666666667% - 13px);
-      max-width: calc(16.666666667% - 13px);
+      -ms-flex: 0 0 calc(16.666666667% - 35px);
+      flex: 0 0 calc(16.666666667% - 35px);
+      max-width: calc(16.666666667% - 35px);
       margin-left: auto;
 
     }
@@ -2632,13 +2679,13 @@ form {
 
   &.level6 {
     &:before {
-      width: calc(100% - 23px);
+      width: calc(100% - 45px);
     }
 
     .team-td:first-child {
-      -ms-flex: 0 0 calc(16.666666667% - 23px);
-      flex: 0 0 calc(16.666666667% - 23px);
-      max-width: calc(16.666666667% - 23px);
+      -ms-flex: 0 0 calc(16.666666667% - 45px);
+      flex: 0 0 calc(16.666666667% - 45px);
+      max-width: calc(16.666666667% - 45px);
       margin-left: auto;
 
     }
@@ -2646,13 +2693,13 @@ form {
 
   &.level7 {
     &:before {
-      width: calc(100% - 32px);
+      width: calc(100% - 55px);
     }
 
     .team-td:first-child {
-      -ms-flex: 0 0 calc(16.666666667% - 32px);
-      flex: 0 0 calc(16.666666667% - 32px);
-      max-width: calc(16.666666667% - 32px);
+      -ms-flex: 0 0 calc(16.666666667% - 55px);
+      flex: 0 0 calc(16.666666667% - 55px);
+      max-width: calc(16.666666667% - 55px);
       margin-left: auto;
 
     }
@@ -2660,13 +2707,13 @@ form {
 
   &.level8 {
     &:before {
-      width: calc(100% - 42px);
+      width: calc(100% - 65px);
     }
 
     .team-td:first-child {
-      -ms-flex: 0 0 calc(16.666666667% - 42px);
-      flex: 0 0 calc(16.666666667% - 42px);
-      max-width: calc(16.666666667% - 42px);
+      -ms-flex: 0 0 calc(16.666666667% - 65px);
+      flex: 0 0 calc(16.666666667% - 65px);
+      max-width: calc(16.666666667% - 65px);
       margin-left: auto;
 
     }
@@ -3638,6 +3685,20 @@ form {
   }
 }
 
+.copy_success {
+  position: absolute;
+    border: 1px solid #15d524;
+  padding: 5px;
+  border-radius: 3px;
+  background: #fff;
+  right: 0;
+  bottom: 100%;
+      color: #9297a0;
+    font-family: "SF Pro Display";
+    font-size: 12px;
+    font-weight: 500;
+}
+
 .referal-form {
   padding: 12px 0 22px;
 
@@ -3648,7 +3709,7 @@ form {
     background-color: #ffffff;
     width: 100%;
     height: 45px;
-
+    position: relative;
     button {
       float: right;
       border-radius: 3px;
@@ -4211,6 +4272,11 @@ form {
   table {
     border-spacing: 0 4px;
     border-collapse: separate;
+    tr {
+      td {
+            vertical-align: middle;
+      }
+    }
 
     &.left {
       margin-top: 52px;
@@ -4845,7 +4911,7 @@ form {
 .n_wallet-info {
   color: #242424;
   font-family: "SF Pro Display";
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1;
 
@@ -5313,5 +5379,124 @@ form {
     content: " ";
     clear: both;
     display: table;
+  }
+}
+
+.trapeze {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  width: 119px;
+    height: 49px;
+      position: absolute;
+  /*  display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;*/
+  z-index: 3;
+  text-align: center;
+
+  &:after {
+      content: "";
+      	border:4px solid transparent; 
+      border-right:4px solid #249b00;
+      border-bottom:4px solid #249b00;
+//      width: 10px;
+//      height: 8px;
+      position: absolute;
+      top: 2px;
+      left: -8px;
+    }
+    &:before {
+      content: "";
+      	border:4px solid transparent; 
+      border-left:4px solid #249b00;
+      border-bottom:4px solid #249b00;
+//      width: 10px;
+//      height: 8px;
+      position: absolute;
+      top: 2px;
+      right: -8px;
+    }
+  
+  .text {
+    position: relative;
+    z-index: 3;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1;
+//      right: 10px;
+  width: 119px;
+    height: 49px;
+        display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+      &:after {
+    content: "";
+    width: 119px;
+    height: 49px;
+    background-color: #39c41d;
+        -webkit-transform: perspective(100px) rotateX(40deg);
+    transform: perspective(290px) rotateX(-25deg);
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+  
+    span {
+    font-weight: 700;
+      font-size: 17px;
+    }
+  }
+  .icon {
+    font-size: 15px;
+  }
+}
+
+.payment {
+  min-height: 80vh;
+  padding: 75px 0;
+  display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  text-align: center;
+
+  .img {
+    margin-bottom: 38px;
+    img {
+    max-width: 100%;
+    
+    }}
+  .title {
+    color: #010101;
+    font-family: "SF Pro Display";
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+  }
+  p {
+    color: #000000;
+    font-family: "SF Pro Display";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
   }
 }
