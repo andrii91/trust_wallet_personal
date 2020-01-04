@@ -173,18 +173,25 @@
             <div class="reinvest">
               <div class="reinvest-item">
                 <div class="title">Реинвест</div>
-                <input type="radio" id="reinvest_1" name="reinvest">
-                <label for="reinvest_1">0%</label>
-                <input type="radio" id="reinvest_2" name="reinvest">
-                <label for="reinvest_2">25%</label>
-                <input type="radio" id="reinvest_3" name="reinvest" checked>
-                <label for="reinvest_3">50%</label>
-                <input type="radio" id="reinvest_4" name="reinvest">
-                <label for="reinvest_4">100%</label>
+                <div class="row">
+                  <div class="col-6">
+                    <input type="radio" id="reinvest_1" name="reinvest">
+                    <label for="reinvest_1">0%</label>
+                    <input type="radio" id="reinvest_2" name="reinvest">
+                    <label for="reinvest_2">25%</label>
+                  </div>
+                  <div class="col-6">
+                    <input type="radio" id="reinvest_3" name="reinvest" checked>
+                    <label for="reinvest_3">50%</label>
+                    <input type="radio" id="reinvest_4" name="reinvest">
+                    <label for="reinvest_4">100%</label>
+                  </div>
+                </div>
+                <p>Реинвест - это....... <br>Следующий реинвест произойдет 1.02.2020 на сумму $100</p>
               </div>
               <div class="reinvest-item">
                 <div class="title">Автопродление</div>
-                <div class="item-scroll">
+                <!--<div class="item-scroll">
                   <input type="checkbox" id="autorenew_1" name="">
                   <label for="autorenew_1">Basic</label>
 
@@ -209,9 +216,12 @@
                   <input type="checkbox" id="autorenew_7" name="">
                   <label for="autorenew_7">Pro</label>
 
+                </div>-->
+                <div class="reinvest-switch">
+                  <input id="reinvest_switch" type="checkbox" name="reinvest_switch" checked> <label for="reinvest_switch">Отключено</label>
                 </div>
+                <p>Автопродление - это....... <br>Следующее автопродление произойдет<br> 1.02.2020 на сумму $100</p>
               </div>
-              <p>Функция активирует автоматический реинвест вашей прибыли от пакета инвестиций. 25-го числа каждого месяца, на выбранный % реинвеста будет автоматически создаваться новый пакет и добавляться в раздел «инвестиция».</p>
             </div>
           </div>
           <div class="col-xl-6">

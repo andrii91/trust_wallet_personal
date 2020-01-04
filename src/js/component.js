@@ -1049,4 +1049,17 @@ $('.history-profile .summ').each(function(){
     $(this).removeClass('submit-form');
 
   })
+  
+  if($('#reinvest_switch').prop("checked")) {
+    $('#reinvest_switch + label').text('Включено');
+  }else{
+    $('#reinvest_switch + label').text('Отключено');
+  }
+  $('#reinvest_switch').change(function(){
+      if($('#reinvest_switch').prop("checked")) {
+    $('#reinvest_switch + label').text('Включено');
+  }else{
+    $('#reinvest_switch + label').text('Отключено');
+  }
+  })
 });

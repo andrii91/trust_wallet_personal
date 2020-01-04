@@ -35,25 +35,25 @@
     <li><a class="button" data-popup href="#bonus_modal">промо модалка которую над повестьи на иконку с подарком в верху которая</a></li>
     <li><a class="button" data-popup href="#add_reviews">Написать отзыв </a></li>
   </ul>
-  
+
   <div id="security_no" class="modal mfp-hide white-popup-block xs-center security">
-        <div class="pay-item">
-        <div class="title">Отключение двухфакторной аутентификации</div>
-        <div class="row align-items-end">
-      <!--    <div class="col-xl-4">
+    <div class="pay-item">
+      <div class="title">Отключение двухфакторной аутентификации</div>
+      <div class="row align-items-end">
+        <!--    <div class="col-xl-4">
             <div class="img"><img src="images/234er.jpg" alt=""></div>
           </div>-->
-          <div class="col-xl-8">
-            <div class="security-code">T32EH4GQIT56GE5QJ62NXNFGWA3MG533</div>
-            <div class="security-input">
-              <span>Код 2FA</span>
-              <input type="text">
-            </div>
-          </div>
-          <div class="col-xl-4">
-            <button class="button disable">Отключить</button>
+        <div class="col-xl-8">
+          <div class="security-code">T32EH4GQIT56GE5QJ62NXNFGWA3MG533</div>
+          <div class="security-input">
+            <span>Код 2FA</span>
+            <input type="text">
           </div>
         </div>
+        <div class="col-xl-4">
+          <button class="button disable">Отключить</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -128,8 +128,8 @@
     </div>
   </div>
   <div id="ladder_ranks" class="modal mfp-hide white-popup-block">
-   <div class="ladder_ranks-info">Для отображения детальной таблицы переверните устройство в горизонатльное положение</div>
-   
+    <div class="ladder_ranks-info">Для отображения детальной таблицы переверните устройство в горизонатльное положение</div>
+
     <div class="row">
       <div class="col-xl-2">
         <div class="ladder_ranks-img">
@@ -628,7 +628,7 @@
     </table>
   </div>
 
-  <div id="security" class="modal mfp-hide white-popup-block">
+  <!--  <div id="security" class="modal mfp-hide white-popup-block">
     <div class="pay-item">
       <div class="title">Подключение двухфакторной аутентификации</div>
       <div class="row align-items-center">
@@ -645,7 +645,20 @@
       </div>
       <button class="button">Сохранить</button>
     </div>
+  </div>-->
+
+  <div id="security" class="modal mfp-hide white-popup-block">
+    <div class="pay-item security-item_modal">
+      <div class="title">Двухфакторная авторизация</div>
+      <div class="img"><img src="images/img-01.svg" alt=""></div>
+      <p class="security-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</p>
+      <div class="security-input">
+        <input type="text" value="77 77777">
+      </div>
+      <button class="button">Авторизовать</button>
+    </div>
   </div>
+  
   <div id="pay_build" class="modal mfp-hide white-popup-block">
 
     <div class="pay-item">
@@ -673,97 +686,97 @@
       <button title="Close (Esc)" type="button" class=" pay-close">Отмена</button>
     </div>
   </div>
-  
-    <div id="bonus_modal" class="modal mfp-hide white-popup-block">
-      <div class="owl-carousel owl-theme no-js">
 
-        <div class="item">
-          <div class="row">
-            <div class="col-12 col-xl-4">
-              <div class="bonus_modal-img">
-                <img src="images/54trga.png" alt="">
-              </div>
+  <div id="bonus_modal" class="modal mfp-hide white-popup-block">
+    <div class="owl-carousel owl-theme no-js">
+
+      <div class="item">
+        <div class="row">
+          <div class="col-12 col-xl-4">
+            <div class="bonus_modal-img">
+              <img src="images/54trga.png" alt="">
             </div>
-            <div class="col-12 col-xl-8">
-              <div class="bonus_modal-item">
-                <div class="bonus_modal-title">Промоушен на iphone 11</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="bonus_modal-progres">
-                  <div class="title">Личная инвестиция, USD</div>
-                  <div class="progress-bar" data-scale="8500" data-all="15000"><span>8500</span> 15 000</div>
-                </div>
-                <div class="bonus_modal-progres">
-                  <div class="title">Оборот 1-й линии, USD</div>
-                  <div class="progress-bar" data-scale="1050" data-all="2000"><span>1050</span> 2000</div>
-                </div>
-                <div class="bonus_modal-progres">
-                  <div class="title">Оборот 2-10-й линий, USD</div>
-                  <div class="progress-bar" data-scale="1050" data-all="4000"><span>1050</span> 4000</div>
-                </div>
+          </div>
+          <div class="col-12 col-xl-8">
+            <div class="bonus_modal-item">
+              <div class="bonus_modal-title">Промоушен на iphone 11</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <div class="bonus_modal-progres">
+                <div class="title">Личная инвестиция, USD</div>
+                <div class="progress-bar" data-scale="8500" data-all="15000"><span>8500</span> 15 000</div>
+              </div>
+              <div class="bonus_modal-progres">
+                <div class="title">Оборот 1-й линии, USD</div>
+                <div class="progress-bar" data-scale="1050" data-all="2000"><span>1050</span> 2000</div>
+              </div>
+              <div class="bonus_modal-progres">
+                <div class="title">Оборот 2-10-й линий, USD</div>
+                <div class="progress-bar" data-scale="1050" data-all="4000"><span>1050</span> 4000</div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="item">
-          <div class="row">
-            <div class="col-12 col-xl-4">
-              <div class="bonus_modal-img">
-                <img src="images/54trga.png" alt="">
-              </div>
+      <div class="item">
+        <div class="row">
+          <div class="col-12 col-xl-4">
+            <div class="bonus_modal-img">
+              <img src="images/54trga.png" alt="">
             </div>
-            <div class="col-12 col-xl-8">
-              <div class="bonus_modal-item">
-                <div class="bonus_modal-title">Промоушен на iphone 11</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="bonus_modal-progres">
-                  <div class="title">Личная инвестиция, USD</div>
-                  <div class="progress-bar" data-scale="8500" data-all="15000"><span>8500</span> 15 000</div>
-                </div>
-                <div class="bonus_modal-progres">
-                  <div class="title">Оборот 1-й линии, USD</div>
-                  <div class="progress-bar" data-scale="1050" data-all="2000"><span>1050</span> 2000</div>
-                </div>
-                <div class="bonus_modal-progres">
-                  <div class="title">Оборот 2-10-й линий, USD</div>
-                  <div class="progress-bar" data-scale="1050" data-all="4000"><span>1050</span> 4000</div>
-                </div>
+          </div>
+          <div class="col-12 col-xl-8">
+            <div class="bonus_modal-item">
+              <div class="bonus_modal-title">Промоушен на iphone 11</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <div class="bonus_modal-progres">
+                <div class="title">Личная инвестиция, USD</div>
+                <div class="progress-bar" data-scale="8500" data-all="15000"><span>8500</span> 15 000</div>
+              </div>
+              <div class="bonus_modal-progres">
+                <div class="title">Оборот 1-й линии, USD</div>
+                <div class="progress-bar" data-scale="1050" data-all="2000"><span>1050</span> 2000</div>
+              </div>
+              <div class="bonus_modal-progres">
+                <div class="title">Оборот 2-10-й линий, USD</div>
+                <div class="progress-bar" data-scale="1050" data-all="4000"><span>1050</span> 4000</div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="item">
-          <div class="row">
-            <div class="col-12 col-xl-4">
-              <div class="bonus_modal-img">
-                <img src="images/54trga.png" alt="">
-              </div>
+      <div class="item">
+        <div class="row">
+          <div class="col-12 col-xl-4">
+            <div class="bonus_modal-img">
+              <img src="images/54trga.png" alt="">
             </div>
-            <div class="col-12 col-xl-8">
-              <div class="bonus_modal-item">
-                <div class="bonus_modal-title">Промоушен на iphone 11</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div class="bonus_modal-progres">
-                  <div class="title">Личная инвестиция, USD</div>
-                  <div class="progress-bar" data-scale="8500" data-all="15000"><span>8500</span> 15 000</div>
-                </div>
-                <div class="bonus_modal-progres">
-                  <div class="title">Оборот 1-й линии, USD</div>
-                  <div class="progress-bar" data-scale="1050" data-all="2000"><span>1050</span> 2000</div>
-                </div>
-                <div class="bonus_modal-progres">
-                  <div class="title">Оборот 2-10-й линий, USD</div>
-                  <div class="progress-bar" data-scale="1050" data-all="4000"><span>1050</span> 4000</div>
-                </div>
+          </div>
+          <div class="col-12 col-xl-8">
+            <div class="bonus_modal-item">
+              <div class="bonus_modal-title">Промоушен на iphone 11</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <div class="bonus_modal-progres">
+                <div class="title">Личная инвестиция, USD</div>
+                <div class="progress-bar" data-scale="8500" data-all="15000"><span>8500</span> 15 000</div>
+              </div>
+              <div class="bonus_modal-progres">
+                <div class="title">Оборот 1-й линии, USD</div>
+                <div class="progress-bar" data-scale="1050" data-all="2000"><span>1050</span> 2000</div>
+              </div>
+              <div class="bonus_modal-progres">
+                <div class="title">Оборот 2-10-й линий, USD</div>
+                <div class="progress-bar" data-scale="1050" data-all="4000"><span>1050</span> 4000</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  
-  
+  </div>
+
+
   <div id="add_reviews" class="modal mfp-hide white-popup-block">
     <div class="row align-items-center">
       <div class="col-xl-3 col-3">
