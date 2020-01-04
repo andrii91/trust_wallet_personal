@@ -955,5 +955,98 @@ $('.history-profile .summ').each(function(){
     $(this).addClass('submit-form');
   })
   
+  
   $('#country').select2();
+  
+  $('.search').on('submit', function (e) {
+    e.preventDefault();
+    var from = $(this);
+    
+    var text, myName, hits, reg;
+    myName = from.find('input').val().toLowerCase();
+    
+    if(myName == "") {
+//      location.reload();
+    }
+    $('.team-item').each(function(){
+      text = $(this).text().toLowerCase();
+      hits = [];
+      reg = new RegExp(myName,"g","i");
+      hits = text.match(reg);
+      
+      if (!hits) {
+        $(this).hide();
+//        $(this).removeClass('show-next');
+        
+      } else {
+        $(this).css('display', 'flex');
+        $(this).prev().addClass('show-next');
+//        $(this).removeClass('block-icon');
+      }
+    })
+
+    $(this).removeClass('submit-form');
+
+  })
+  
+/*  $('.search input').change(function () {
+//    e.preventDefault();
+    var from = $(this);
+    
+    var text, myName, hits, reg;
+    myName = from.val().toLowerCase();
+    
+    if(myName == "") {
+//      location.reload();
+    }
+    $('.team-item').each(function(){
+      text = $(this).text().toLowerCase();
+      hits = [];
+      reg = new RegExp(myName,"g","i");
+      hits = text.match(reg);
+      
+      if (!hits) {
+        $(this).hide();
+        $(this).removeClass('show-next');
+        
+      } else {
+        $(this).css('display', 'flex');
+        $(this).prev().addClass('show-next');
+//        $(this).removeClass('block-icon');
+      }
+    })
+
+    $(this).removeClass('submit-form');
+
+  })*/
+  
+  $('.search input').keyup(function () {
+    var from = $(this);
+    
+    var text, myName, hits, reg;
+    myName = from.val().toLowerCase();
+    
+    if(myName == "") {
+//      location.reload();
+    }
+    $('.team-item').each(function(){
+      text = $(this).text().toLowerCase();
+      hits = [];
+      reg = new RegExp(myName,"g","i");
+      hits = text.match(reg);
+      
+      if (!hits) {
+        $(this).hide();
+//        $(this).removeClass('show-next');
+        
+      } else {
+        $(this).css('display', 'flex');
+        $(this).prev().addClass('show-next');
+//        $(this).removeClass('block-icon');
+      }
+    })
+
+    $(this).removeClass('submit-form');
+
+  })
 });

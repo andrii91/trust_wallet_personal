@@ -2529,12 +2529,31 @@ form {
       line-height: 1;
       width: 100%;
       max-width: 195px;
-      box-shadow: 0 7px 21px rgba(229, 232, 239, 0.4);
+      box-shadow: 0 7px 21px rgba(229, 232, 239, 0.4)  !important;
       border-radius: 3px;
-      background-color: #ffffff;
+      background-color: #ffffff  !important;
       padding: 6px 6px 6px 30px;
       border: 0;
-      background-image: url('../images/s.svg');
+      background-image: url('../images/s.svg') !important;
+      background-size: 13px;
+      background-repeat: no-repeat;
+      background-position: 8px center;
+
+    }
+    
+    input:focus, input:active, input:-internal-autofill-selected  {
+      color: #585c62;
+      font-family: "SF Pro Display";
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 1;
+      width: 100%;
+      box-shadow: 0 7px 21px rgba(229, 232, 239, 0.4)  !important;
+      border-radius: 3px;
+      background-color: #ffffff  !important;
+      padding: 6px 6px 6px 30px;
+      border: 0;
+      background-image: url('../images/s.svg') !important;
       background-size: 13px;
       background-repeat: no-repeat;
       background-position: 8px center;
@@ -5498,5 +5517,17 @@ form {
     margin-left: auto;
     margin-right: auto;
     max-width: 450px;
+  }
+}
+
+main {
+  min-height: 100vh;
+  padding-bottom: 41px;
+  +footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
   }
 }
