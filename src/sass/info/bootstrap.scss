@@ -6837,7 +6837,8 @@ a.close.disabled {
 .bs-popover-top > .arrow::before {
   bottom: 0;
   border-width: .5rem .5rem 0;
-  border-top-color: rgba(0, 0, 0, .25)
+  border-top-color: rgba(0, 0, 0, .25);
+  border-top-color: #ccf2cf;
 }
 
 .bs-popover-auto[x-placement^=top] > .arrow::after,
@@ -6864,7 +6865,8 @@ a.close.disabled {
 .bs-popover-right > .arrow::before {
   left: 0;
   border-width: .5rem .5rem .5rem 0;
-  border-right-color: rgba(0, 0, 0, .25)
+  border-top-color: rgba(0, 0, 0, .25);
+  border-top-color: #ccf2cf;
 }
 
 .bs-popover-auto[x-placement^=right] > .arrow::after,
@@ -6888,7 +6890,8 @@ a.close.disabled {
 .bs-popover-bottom > .arrow::before {
   top: 0;
   border-width: 0 .5rem .5rem .5rem;
-  border-bottom-color: rgba(0, 0, 0, .25)
+  border-top-color: rgba(0, 0, 0, .25);
+  border-top-color: #ccf2cf;
 }
 
 .bs-popover-auto[x-placement^=bottom] > .arrow::after,

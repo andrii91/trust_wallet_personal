@@ -1062,4 +1062,28 @@ $('.history-profile .summ').each(function(){
     $('#reinvest_switch + label').text('Отключено');
   }
   })
+  
+  
+//  if($(window).width() > 1200) {
+        /*$('#team__tree ul.jqtree_common .jqtree_common.jqtree-folder  .jqtree-element.jqtree_common.active').show();*/
+    $('#tree_search').keyup(function () {
+      var from = $(this);
+      
+      var countSymbol = from.val().length;
+      if(countSymbol > 2) {
+        $('#team__tree ul.jqtree_common .jqtree_common.jqtree-folder  .jqtree-element.jqtree_common').hide();
+        $('#team__tree .jqtree_common.active>[role="presentation"]').show();
+      }else{
+        $('.jqtree_common [role="presentation"]').show();
+      }
+      
+    })
+//  }
+  
+  
+//   $('[data-toggle="tooltip"]').tooltip();
+      $('[data-toggle="popover"]').popover({
+        trigger: 'hover'
+    });
+  
 });

@@ -460,21 +460,15 @@ body {
   }
 }
 
-.show_tooltip {
-  position: relative;
-  cursor: pointer;
-  z-index: 6;
 
-  .tooltip {
-    position: absolute;
-    top: 140%;
-    left: 50%;
-    transform: translateX(-50%);
+
+  .popover {
+   
     background: #fff;
     padding: 10px 9px;
-    width: 250px;
+//    width: 250px;
     color: #434343;
-    text-align: center;
+//    text-align: center;
     font-family: "SF Pro Display";
     font-size: 10px;
     font-weight: 400;
@@ -500,7 +494,7 @@ body {
       line-height: 16px;
       min-height: 23px;
 
-      &:before {
+     /* &:before {
         content: "";
 
         z-index: 9999;
@@ -512,7 +506,7 @@ body {
         height: 6px;
         position: absolute;
         top: -17px;
-      }
+      }*/
     }
 
     a {
@@ -527,7 +521,7 @@ body {
       text-align: left;
     }
 
-    &:before {
+    /*&:before {
       content: "";
       border: 9px solid transparent;
       border-bottom: 9px solid #fff;
@@ -539,9 +533,8 @@ body {
       transform: translateX(-50%);
       z-index: 9999;
 
-    }
+    }*/
   }
-}
 
 .graf-content {
   canvas {
@@ -5488,7 +5481,6 @@ form {
     font-size: 23px;
     font-weight: 700;
     line-height: 1;
-//      right: 10px;
   width: 119px;
     height: 49px;
         display: -ms-flexbox;
@@ -5497,7 +5489,11 @@ form {
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
-      &:after {
+    b {
+      position: relative;
+      z-index: 55;
+    }
+      .after {
     content: "";
     width: 119px;
     height: 49px;
@@ -5625,4 +5621,12 @@ main {
     padding-top: 13px;
     padding-bottom: 13px;
   }
+}
+
+
+form.fixed {
+  position: fixed;
+  max-width: 202px;
+  width: 100%;
+  z-index: 999;
 }
