@@ -5474,21 +5474,19 @@ form {
     }
   
   .text {
-    position: relative;
     z-index: 3;
     color: #ffffff;
     font-family: Montserrat;
     font-size: 23px;
     font-weight: 700;
-    line-height: 1;
+    line-height: 2;
   width: 119px;
     height: 49px;
-        display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
     b {
       position: relative;
       z-index: 55;
