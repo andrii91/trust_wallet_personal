@@ -5486,7 +5486,6 @@ form {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-
     b {
       position: relative;
       z-index: 55;
@@ -5496,8 +5495,10 @@ form {
     width: 119px;
     height: 49px;
     background-color: #39c41d;
-        -webkit-transform: perspective(100px) rotateX(40deg);
+    -webkit-transform: perspective(290px) rotateX(-25deg);
     transform: perspective(290px) rotateX(-25deg);
+    transform-origin: top;
+        
     border-radius: 5px;
     position: absolute;
     top: 0;
