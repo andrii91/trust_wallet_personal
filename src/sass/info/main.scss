@@ -5459,7 +5459,7 @@ form {
 //      height: 8px;
       position: absolute;
       top: 2px;
-      left: -8px;
+      left: -10px;
     }
     &:before {
       content: "";
@@ -5470,7 +5470,7 @@ form {
 //      height: 8px;
       position: absolute;
       top: 2px;
-      right: -8px;
+      right: -10px;
     }
   
   .text {
@@ -5479,13 +5479,20 @@ form {
     font-family: Montserrat;
     font-size: 23px;
     font-weight: 700;
-    line-height: 2;
+    line-height: 1;
   width: 119px;
     height: 49px;
-    position: absolute;
+/*    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);*/
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     b {
       position: relative;
       z-index: 55;
@@ -5497,7 +5504,7 @@ form {
     background-color: #39c41d;
     -webkit-transform: perspective(290px) rotateX(-25deg);
     transform: perspective(290px) rotateX(-25deg);
-    transform-origin: top;
+    transform-origin: bottom;
         
     border-radius: 5px;
     position: absolute;
