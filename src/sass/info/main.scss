@@ -5636,3 +5636,31 @@ form.fixed {
   width: 100%;
   z-index: 999;
 }
+
+.congratulation-item {
+  text-align: center;
+  .img {
+    img {
+      max-width: 200px;
+    }
+    margin-bottom: 5px;
+  }
+  .title {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+  button {
+    max-width: 130px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+#congratulation {
+  width: 100%;
+max-width: 600px;
+}
