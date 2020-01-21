@@ -228,6 +228,12 @@ $(document).ready(function () {
     responsive: true
   });
 
+  $('.investments-table').DataTable({
+    "dom": '<t>',
+    "ordering": false,
+    responsive: true
+  });
+
   $('.report-table table').dataTable({
     responsive: true,
     "dom": '<fltp>'

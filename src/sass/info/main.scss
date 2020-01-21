@@ -331,6 +331,9 @@ body {
     position: fixed;
     top: 0;
   }
+  .container {
+    position: relative;
+  }
 }
 
 .nav-menu {
@@ -580,6 +583,16 @@ body {
   transition: .3s;
   border: 0;
   cursor: pointer;
+  &.order_btn {
+    padding:  10px 23px;
+    color: #ffffff;
+    font-family: "SF Pro Display";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.57;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
 
   &.disable {
     background: #fda830;
@@ -5663,4 +5676,170 @@ form.fixed {
 #congratulation {
   width: 100%;
 max-width: 600px;
+}
+
+.leader {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  .photo {
+
+    border-radius: 50%;
+    margin-right: 11px;
+    padding: 5px;
+    width: 63px;
+    height: 63px;
+    box-shadow: 0 2px 5px 1px rgba(209, 215, 222, 0.47);
+    background-color: #ffffff;
+    img {
+      width: 100%;
+      max-width: 53px;
+    max-height: 53px;
+    border: 1px solid #9298a0;
+    background-color: #2fc738;
+    background-image: linear-gradient(to top, #d2d7dd 0%, #f0f3f7 100%);
+      border-radius: 50%;
+      padding: 11px ;
+    }
+  }
+  .name {
+    color: #9297a0;
+    font-family: "SF Pro Display";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    max-width: 55px;
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+  }
+  
+  &.active {
+    .photo {
+      img {
+        border: 1px solid #2fc738;
+        background-color: #2fc738;
+        background-image: linear-gradient(to top, #33bc3e 0%, #27e335 100%);
+        padding: 2px;
+      }
+    }
+    .name {
+      color: #2fc738;
+    }
+  }
+}
+
+.leader-item {
+  text-align: center;
+  .photo {
+    display: inline-block;
+    img {
+      width: 67px;
+      height: 67px;
+      box-shadow: 0 2px 5px 1px rgba(209, 215, 222, 0.47);
+      background-color: #ffffff;
+      border-radius: 50%;
+      padding: 5px;
+    }
+    margin-bottom: 11px;
+  }
+  .name {
+    color: #000000;
+    font-family: "SF Pro Display";
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.21;
+    margin-bottom: 11px;
+    span {
+      color: #2fc738;
+      font-family: "SF Pro Display";
+      font-weight: 500;
+      display: block;
+    }
+  }
+  p {
+    color: #010101;
+    font-family: "SF Pro Display";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.07;
+    margin-bottom: 15px;
+    span {
+      color: #2ecf3a;
+      font-family: "SF Pro Display";
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+}
+
+.investments {
+  padding: 35px 0;
+}
+
+.investments-table {
+  width: 100% !important;
+  
+  &.dataTable {
+    margin-top: 20px;
+    border-collapse: collapse;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: 0 7px 21px rgba(229, 232, 239, 0.4);
+border-radius: 5px;
+background-color: #ffffff;
+    overflow: hidden;
+  }
+  thead {
+    background: #00c823;
+    tr {
+      th {
+        padding: 0 19px;
+        height: 41px;
+        border: 0;
+        color: #fff;
+        font-family: "SF Pro Display";
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 2.93;
+        text-transform: uppercase;
+        text-align: center;
+        &:first-child {
+          text-align: left;
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      &:nth-child(even) {
+        td {
+          background-color: #f7f8f9;
+        }
+      }
+      td {
+        padding: 10px 19px;
+        height: 41px;
+        color: #000000;
+        font-family: "SF Pro Display";
+        font-size: 12px;
+        line-height: 1;
+        font-weight: bold;
+        text-align: center;
+        border-left: 1px solid #e1ebe5;
+        &:first-child {
+          text-align: left;
+          border: 0;
+          font-weight: 400;
+        }
+      }
+    }
+  }
 }
