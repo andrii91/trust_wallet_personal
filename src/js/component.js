@@ -157,6 +157,18 @@ $(document).ready(function () {
   }
 
   if ($("#reportgraf").length > 0) {
+    
+    var myData = [0, 20, 50, 35, 40, 30, 45, 50, 35, -40, 30, 45, 55, -56, -59, 65, 40, 56, 45, 50, 35, 40, 30, 45];
+    var myColors=[];
+
+    $.each(myData, function( index,value ) {
+      if(value>0){
+         myColors[index]="#2cd538";
+      }else{
+        myColors[index]="#e4013b";
+      }
+    });
+
 
     new Chart('reportgraf', {
       type: 'line',
@@ -164,9 +176,11 @@ $(document).ready(function () {
         labels: [0, 20, 50, 35, 40, 30, 45, 50, 35, 40, 30, 45, 55, 56, 59, 65, 40, 56, 45, 50, 35, 40, 30, 45],
         datasets: [{
           backgroundColor: 'transparent',
-          borderColor: '#2fc738',
-          data: [0, 20, 50, 35, 40, 30, 45, 50, 35, -40, 30, 45, 55, -56, -59, 65, 40, 56, 45, 50, 35, 40, 30, 45],
-          label: 'График монеты',
+          borderColor: "#2cd538",
+          data: myData,
+          borderWidth: 1,
+           pointBackgroundColor: myColors,
+          label: 'График торговли',
           //						fill: boundary
 					}]
       },
@@ -1092,4 +1106,7 @@ $('.history-profile .summ').each(function(){
         trigger: 'hover'
     });
   
+  $('.transfer-btn').click(function(){
+    $(this).append('<div class="spinner-border text-success" role="status"></div>');
+  })
 });
