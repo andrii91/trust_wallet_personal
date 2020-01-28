@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg">
-<metadata>Copyright (C) 2019 by original authors @ fontello.com</metadata>
+<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
 <defs>
 <font id="icon" horiz-adv-x="1000" >
 <font-face font-family="icon" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
@@ -107,6 +107,8 @@
 <glyph glyph-name="wallet-1" unicode="&#xe83f;" d="M902 578h-51l-252 252c-13 12-33 12-46 0l-75-75-74 75c-13 12-34 12-47 0l-251-252h-73c-18 0-33-14-33-32v-653c0-18 15-32 33-32h739 130c54 0 98 44 98 98v130 261 130c0 54-44 98-98 98z m-326 182l182-182h-103l-131 131 52 51z m-196 0l75-74 108-108h-365l182 182z m424-801c0-18-14-33-32-33h-707v587h55 521 131c18 0 32-15 32-33v-97h-97c-90 0-163-73-163-163s73-163 163-163h97v-98z m131 0c0-18-15-33-33-33h-38c4 10 6 21 6 33v98h65v-98z m0 163h-98-130c-54 0-98 44-98 98s44 97 98 97h130 98v-195z m0 261h-65v97c0 12-2 23-6 33h38c18 0 33-15 33-33v-97z" horiz-adv-x="1000" />
 
 <glyph glyph-name="report" unicode="&#xe840;" d="M640 850h-536v-998h796v738l-260 260z m124-234h-104v99l104-99z m-582-686v842h400v-198c0-20 21-36 42-36h198v-608h-640z m94 145h447v-52h-447z m0 489h265v-52h-265z m353-166h31l-114-110-83 84-193-193 37-36 156 156 83-83 151 145v-31h52v120h-120z m-353 280h265v-52h-265z" horiz-adv-x="1000" />
+
+<glyph glyph-name="iconfinder-icon" unicode="&#xe842;" d="M562 408l0-75c-20-1-41-2-62-2-23 0-45 1-66 2l0 60 0 0 0 14c-118-5-205-26-205-50 0-28 121-52 271-52 150 0 271 24 271 52 0 25-89 45-209 51z m-62 442c-276 0-500-224-500-500 0-276 224-500 500-500 276 0 500 224 500 500 0 276-224 500-500 500z m62-585l0-220-128 0 0 220c-138 8-240 40-240 78 0 39 102 70 240 78l0 62-175 0 0 128 477 0 0-128-174 0 0-61c139-8 244-40 244-79 0-38-105-70-244-78z" horiz-adv-x="1000" />
 
 <glyph glyph-name="edit" unicode="&#xf14b;" d="M225 232l85-85-29-29h-31v53h-54v32z m232 217q7-7-2-16l-163-163q-9-9-16-1-8 7 1 16l163 163q9 9 17 1z m-153-385l303 304-161 161-303-304v-161h161z m339 340l51 51q16 16 16 38t-16 38l-85 85q-15 15-38 15t-37-15l-52-52z m214 214v-536q0-66-47-113t-114-48h-535q-67 0-114 48t-47 113v536q0 66 47 113t114 48h535q67 0 114-48t47-113z" horiz-adv-x="857.1" />
 
