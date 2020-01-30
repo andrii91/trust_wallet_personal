@@ -1109,4 +1109,9 @@ $('.history-profile .summ').each(function(){
   $('.transfer-btn').click(function(){
     $(this).append('<div class="spinner-border text-success" role="status"></div>');
   })
+  
+  
+  $('.individual .calc-radio li').click(function(){
+    $(this).parents('.individual').toggleClass('individual_new');
+  })
 });

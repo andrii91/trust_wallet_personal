@@ -1187,7 +1187,6 @@ margin-top: 14px;
   border-radius: 3px;
   background-color: #ffffff;
   padding: 20px;
-
   .button {
     margin-top: 20px;
   }
@@ -1324,7 +1323,7 @@ margin-top: 14px;
     &:nth-child(2) {
 
       &:after {
-        content: "полугодовой";
+        content: "плавающий";
         color: #545555;
         font-family: "SF Pro Display";
         font-size: 12px;
@@ -5982,9 +5981,20 @@ background-color: #ffffff;
     background-color: #fff;
     background-repeat: no-repeat;
     background-position: right top;
+    padding-top: 29px;
+    padding-bottom: 29px;
   }
   .button {
     margin-bottom: 16px;
     margin-top: 10px;
+  }
+    .border {
+    &:before {
+      content: "";
+      display: none;
+    }
+  }
+  .tab_item {
+    display: none;
   }
 }
