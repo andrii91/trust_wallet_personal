@@ -807,5 +807,14 @@ margin-right: 0;
     transform: none;
     top: -25px;
   }
-
+  .individual_new .button {
+    margin-bottom: 0;
+  }
+  
+  .individual_new .individual-calc .label {
+    display: block;
+  }
+  .individual_new .individual-calc .label input {
+    width: calc(100% - 17px);
+  }
 }

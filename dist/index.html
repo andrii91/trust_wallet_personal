@@ -725,7 +725,7 @@
               </tbody>
             </table>
           </div>
-          <div class="col-xl-6 individual">
+<!--          <div class="col-xl-6 individual">
             <div class="header-title"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.6 511.6">
                 <path d="M493 347H18c-5 0-9 2-13 6-3 3-5 8-5 12v74c0 4 2 9 5 12 4 4 8 6 13 6h475c5 0 10-2 13-6 4-3 6-8 6-12v-74c0-4-2-9-6-12-3-4-8-6-13-6zm-18 73H292v-36h183v36zM493 201H18c-5 0-9 2-13 5-3 4-5 8-5 13v73c0 5 2 10 5 13 4 4 8 6 13 6h475c5 0 10-2 13-6 4-3 6-8 6-13v-73c0-5-2-9-6-13-3-3-8-5-13-5zm-18 73H183v-36h292v36zM506 60c-3-3-8-5-13-5H18c-5 0-9 2-13 5-3 4-5 8-5 13v73c0 5 2 9 5 13 4 4 8 5 13 5h475c5 0 10-1 13-5 4-4 6-8 6-13V73c0-5-2-9-6-13zm-31 68H365V91h110v37z" /></svg> ИНДИВИДУАЛЬНАЯ СУММА </div>
             <div class="individual-calc">
@@ -762,6 +762,31 @@
 
                     <span id="year_usd" class="input"></span>
                   </label>
+                  <a data-popup href="#pay_1" class="button">инвестировать</a>
+                </div>
+              </div>
+              <div class="worning"><span class="icon icon-warning-1"></span>Внимание, сумма дохода может меняться, в зависимости от кол-ва дней в месяце</div>
+            </div>
+          </div>-->
+          <div class="col-xl-6 individual individual_new">
+            <div class="header-title"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.6 511.6">
+                <path d="M493 347H18c-5 0-9 2-13 6-3 3-5 8-5 12v74c0 4 2 9 5 12 4 4 8 6 13 6h475c5 0 10-2 13-6 4-3 6-8 6-12v-74c0-4-2-9-6-12-3-4-8-6-13-6zm-18 73H292v-36h183v36zM493 201H18c-5 0-9 2-13 5-3 4-5 8-5 13v73c0 5 2 10 5 13 4 4 8 6 13 6h475c5 0 10-2 13-6 4-3 6-8 6-13v-73c0-5-2-9-6-13-3-3-8-5-13-5zm-18 73H183v-36h292v36zM506 60c-3-3-8-5-13-5H18c-5 0-9 2-13 5-3 4-5 8-5 13v73c0 5 2 9 5 13 4 4 8 5 13 5h475c5 0 10-1 13-5 4-4 6-8 6-13V73c0-5-2-9-6-13zm-31 68H365V91h110v37z" /></svg> ИНДИВИДУАЛЬНАЯ СУММА </div>
+            <div class="individual-calc">
+              <div class="row align-items-end">
+                <div class="col-xl-8">
+                  <div class="label">
+                    <span>$</span> <input id="calc_val_usd" type="number">
+                  </div>
+                  
+                  <ul class="calc-radio">
+                    <li class="active" data-percent="10"></li>
+                    <li data-percent="7"></li>
+                  </ul>
+                  <input data-percent="10" id="calculator_input_usd" type="text" name="" placeholder="">
+                  <p class="calc-info">Впишите или выберите в слайдере сумму инвестиции, <br>чтобы моментально посчитать будущую прибыть.</p>
+                </div>
+                <div class="col-xl-4 ">
+
                   <a data-popup href="#pay_1" class="button">инвестировать</a>
                 </div>
               </div>

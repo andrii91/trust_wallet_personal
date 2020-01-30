@@ -5975,3 +5975,16 @@ background-color: #ffffff;
   text-align: center;
   width: 100%;
 }
+
+.individual_new {
+  .individual-calc {
+    background-image: url('../images/individual_new.png');
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+  .button {
+    margin-bottom: 16px;
+    margin-top: 10px;
+  }
+}
