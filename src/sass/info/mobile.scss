@@ -817,4 +817,10 @@ margin-right: 0;
   .individual_new .individual-calc .label input {
     width: calc(100% - 17px);
   }
+  .leader-row {
+    .button {
+      font-size: 12px;
+      min-width: 130px;
+    }
+  }
 }

@@ -4326,7 +4326,7 @@ form {
 }
 
 #ladder_ranks {
-  max-width: 976px;
+  max-width: 980px;
 }
 
 .ladder_ranks-table {
@@ -5997,4 +5997,46 @@ background-color: #ffffff;
   .tab_item {
     display: none;
   }
+}
+
+#ladder_ranks_info {
+  max-width: 100%;
+  width: 100%;
+    object,iframe {
+      width: 100%;
+      min-height: 78vh;
+      }
+}
+
+.leader-row {
+  display: flex;
+      flex-direction: row;
+    justify-content: center;
+    align-items: center;
+      max-width: 758px;
+    margin-left: auto;
+    margin-right: 5px;
+  .ladder_ranks-text , .button{
+    flex-grow: 1;
+    .icon {
+      flex-grow: 1;
+    }
+  }
+  .button {
+        padding: 11px 10px;
+  }
+}
+
+.ladder_ranks-text {
+  color: #050505;
+  font-family: "SF Pro Display";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  border-radius: 5px;
+border: 1px solid #dadbdf;
+background-color: #f5f9fa;margin-right: 5px;
+  text-align: center;
+  padding: 11px 5px;
 }
