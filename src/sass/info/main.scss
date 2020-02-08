@@ -6040,3 +6040,57 @@ background-color: #f5f9fa;margin-right: 5px;
   text-align: center;
   padding: 11px 5px;
 }
+
+
+
+.transaction-info {
+  font-weight: bold;
+}
+
+.investment-item {
+  .title {
+    color: #000000;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .pay-close {
+    max-width: 127px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.investment-list {
+  border-radius: 5px;
+  border: 1px solid #e1dddd;
+  background-color: #ffffff;
+  list-style: none;
+  padding: 0;
+  margin: 23px 0 17px;
+  
+  li {
+    padding: 8px 14px; 
+    color: #59616a;
+    font-family: "SF Pro Display";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    &:nth-child(even) {
+      background-color: #ecf8ed;
+    }
+    span {
+      float: right;
+      font-weight: 700;
+    }
+  }
+}
+
+.investment-img {
+  text-align: center;
+  img {
+    width: 100%;
+  }
+}
