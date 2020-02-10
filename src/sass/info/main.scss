@@ -6094,3 +6094,24 @@ background-color: #f5f9fa;margin-right: 5px;
     width: 100%;
   }
 }
+
+.work_in_progress {
+  text-align: center;
+  padding: 56px 0;
+  .img {
+    img {
+      width: 100%;
+      max-width: 435px;
+    }
+  }
+  color: #000000;
+  p {
+    font-size: 21px;
+font-weight: 700;
+  }
+  h1 {
+    font-size: 25px;
+font-weight: 700;
+text-transform: uppercase;
+  }
+}
