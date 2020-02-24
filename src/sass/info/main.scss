@@ -6098,6 +6098,14 @@ background-color: #f5f9fa;margin-right: 5px;
 .work_in_progress {
   text-align: center;
   padding: 56px 0;
+  &.error404 {
+    .img {
+      img {
+        max-width: 535px;
+      margin-bottom: -40px;
+      }
+    }
+  }
   .img {
     img {
       width: 100%;
